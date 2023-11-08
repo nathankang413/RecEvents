@@ -20,7 +20,6 @@ import static javafx.collections.FXCollections.observableArrayList;
 public class EventsPage extends Scene {
     public EventsPage (Stage primaryStage) {
         super(new GridPane(), WINDOW_WIDTH, WINDOW_HEIGHT);
-
         GridPane grid = (GridPane) this.getRoot();
 
         // Create the table

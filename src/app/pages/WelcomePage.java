@@ -45,7 +45,5 @@ public class WelcomePage extends Scene {
         studentButton.setOnAction(e -> {
             primaryStage.setScene(new StudentLoginPage(primaryStage));
         });
-
     }
-
 }

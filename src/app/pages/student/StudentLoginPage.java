@@ -32,19 +32,15 @@ public class StudentLoginPage extends Scene {
         sceneTitle.setFont(Font.font("Tahoma", 20));
         grid.add(sceneTitle, 0, 0, 2, 1);
 
-        // Username Label
+        // Username Label and Field
         Label usernameLabel = new Label("Username:");
         grid.add(usernameLabel, 0, 1);
-
-        // Username Text Field
         TextField usernameTextField = new TextField();
         grid.add(usernameTextField, 1, 1);
 
-        // Password Label
+        // Password Label and Field
         Label passwordLabel = new Label("Password:");
         grid.add(passwordLabel, 0, 2);
-
-        // Password Text Field
         PasswordField passwordTextField = new PasswordField();
         grid.add(passwordTextField, 1, 2);
 

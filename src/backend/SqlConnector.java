@@ -12,7 +12,6 @@ public class SqlConnector {
      * to our database.
      */
     public static void init() {
-
         Properties creds = new Properties();
         creds.put("user", Constants.DB_USERNAME);
         creds.put("password", Constants.DB_PASSWORD);
