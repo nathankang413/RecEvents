@@ -32,7 +32,7 @@ public class StudentHomePage extends Scene {
         Button eventSearchButton = new Button("Event Search");
         grid.add(eventSearchButton, 0, 1);
         eventSearchButton.setOnAction(e -> {
-//            primaryStage.setScene(new EventsPage(primaryStage));
+            primaryStage.setScene(new EventsPage(primaryStage));
         });
 
         // Profile button

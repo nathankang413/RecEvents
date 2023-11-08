@@ -28,7 +28,7 @@ public class StudentLoginPage extends Scene {
         grid.setPadding(new Insets(25,25,25,25));
 
         // Title Text
-        Text sceneTitle = new Text("Student Login");
+        Text sceneTitle = new Text("New Student");
         sceneTitle.setFont(Font.font("Tahoma", 20));
         grid.add(sceneTitle, 0, 0, 2, 1);
 
@@ -49,14 +49,16 @@ public class StudentLoginPage extends Scene {
         loginButton.setAlignment(Pos.BOTTOM_RIGHT);
         grid.add(loginButton, 1, 3);
         loginButton.setOnAction(e -> {
-//            primaryStage.setScene(new StudentHomePage(primaryStage));
+            if (validateLogin(usernameTextField.getText(), passwordTextField.getText())) {
+                primaryStage.setScene(new StudentHomePage(primaryStage));
+            }
         });
 
         // New User Button
         Button newUserButton = new Button("New User");
         grid.add(newUserButton, 1, 4);
         newUserButton.setOnAction(e -> {
-//            primaryStage.setScene(new NewStudentPage(primaryStage));
+            primaryStage.setScene(new NewStudentPage(primaryStage));
         });
 
         // Back Button
@@ -65,5 +67,10 @@ public class StudentLoginPage extends Scene {
         backButton.setOnAction(e -> {
             primaryStage.setScene(new WelcomePage(primaryStage));
         });
+    }
+
+    private boolean validateLogin(String username, String password) {
+        // TODO
+        return true;
     }
 }
