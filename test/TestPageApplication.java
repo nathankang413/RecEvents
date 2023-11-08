@@ -16,7 +16,7 @@ public class TestPageApplication extends Application {
         SqlConnector.init();
 
         // NOTE: choose the page that you want to test
-        Scene page = new EventsPage(primaryStage);
+        Scene page = new NewStudentPage(primaryStage);
 
         primaryStage.setScene(page);
         primaryStage.show();

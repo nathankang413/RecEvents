@@ -29,7 +29,7 @@ public class SqlConnector {
         }
     }
 
-    public static ResultSet runSql(String query) {
+    public static ResultSet runQuery(String query) {
         if (connection == null) {
             System.out.println("SqlConnector not initialized.");
             return null;
@@ -42,6 +42,23 @@ public class SqlConnector {
             e.printStackTrace();
             return null;
         }
+    }
+
+    public static boolean runUpdate(String query) {
+        if (connection == null) {
+            System.out.println("SqlConnector not initialized.");
+            return false;
+        }
+
+        try {
+            Statement statement = connection.createStatement();
+            return statement.executeUpdate(query) > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+
+
     }
 
 }

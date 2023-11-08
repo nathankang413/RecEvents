@@ -3,6 +3,8 @@ package app.pages.student;
 import backend.ColumnInfoTriple;
 import backend.queries.AvailableEventView;
 import javafx.collections.ObservableList;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -17,12 +19,18 @@ import static javafx.collections.FXCollections.observableArrayList;
 public class EventsPage extends Scene {
     public EventsPage (Stage primaryStage) {
         super(new GridPane(), WINDOW_WIDTH, WINDOW_HEIGHT);
+
         GridPane grid = (GridPane) this.getRoot();
+        grid.setAlignment(Pos.CENTER);
+        grid.setHgap(10);
+        grid.setVgap(10);
+        grid.setPadding(new Insets(25,25,25,25));
 
         // Create the table
         TableView<AvailableEventView> table = new TableView<>();
         ObservableList<AvailableEventView> list = observableArrayList();
         table.setItems(list);
+        table.setPrefWidth(WINDOW_WIDTH);
         grid.add(table, 0, 0);
 
         // Create the columns and populate table

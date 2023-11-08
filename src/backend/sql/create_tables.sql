@@ -1,20 +1,20 @@
 -- run this in mySQL to create the tables
 
-CREATE TABLE Instructors (
+CREATE TABLE IF NOT EXISTS Instructors (
     id INT AUTO_INCREMENT PRIMARY KEY,
     full_name VARCHAR(255) NOT NULL,
     username VARCHAR(255) UNIQUE NOT NULL,
-    pw_hash VARCHAR(255) NOT NULL
+    pw_hash INT NOT NULL
 );
 
-CREATE TABLE Students (
+CREATE TABLE IF NOT EXISTS Students (
     id INT AUTO_INCREMENT PRIMARY KEY,
     full_name VARCHAR(255) NOT NULL,
     username VARCHAR(255) UNIQUE NOT NULL,
-    pw_hash VARCHAR(255) NOT NULL
+    pw_hash INT NOT NULL
 );
 
-CREATE TABLE Classes (
+CREATE TABLE IF NOT EXISTS Classes (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     instructor_id INT NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE Classes (
     FOREIGN KEY (instructor_id) REFERENCES Instructors(id)
 );
 
-CREATE TABLE Events (
+CREATE TABLE IF NOT EXISTS Events (
     id INT AUTO_INCREMENT PRIMARY KEY,
     class_id INT NOT NULL,
     room VARCHAR(255) NOT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE Events (
     FOREIGN KEY (class_id) REFERENCES Classes(id)
 );
 
-CREATE TABLE Signups (
+CREATE TABLE IF NOT EXISTS Signups (
     id INT AUTO_INCREMENT PRIMARY KEY,
     student_id INT NOT NULL,
     event_id INT NOT NULL,

@@ -12,6 +12,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import backend.queries.StudentValidation;
 
 import static app.Constants.WINDOW_HEIGHT;
 import static app.Constants.WINDOW_WIDTH;
@@ -50,21 +51,40 @@ public class NewStudentPage extends Scene {
         PasswordField confirmPasswordField = new PasswordField();
         grid.add(confirmPasswordField, 1, 3);
 
+        // Error Label
+        Label errorLabel = new Label("");
+        grid.add(errorLabel, 1, 6);
+
         // Signup Button
         Button signupButton = new Button("Sign Up");
         signupButton.setAlignment(Pos.BOTTOM_RIGHT);
         grid.add(signupButton, 1, 4);
         signupButton.setOnAction(e -> {
-            if (validateNewCreds(usernameTextField.getText(), passwordTextField.getText(), confirmPasswordField.getText())) {
+            if (usernameTextField.getLength() == 0 || passwordTextField.getLength() == 0 || confirmPasswordField.getLength() == 0) {
+                errorLabel.setText("Please fill out all fields");
+                return;
+            }
+            if (StudentValidation.usernameExists(usernameTextField.getText())) {
+                errorLabel.setText("Username already exists");
+                return;
+            }
+            if (!passwordTextField.getText().equals(confirmPasswordField.getText())) {
+                errorLabel.setText("Passwords do not match");
+                return;
+            }
+            // TODO: name field
+            if (StudentValidation.insertNewCreds("Example name", usernameTextField.getText(), passwordTextField.getText())) {
                 primaryStage.setScene(new StudentHomePage(primaryStage));
+            } else {
+                errorLabel.setText("Error creating account");
             }
         });
 
-        // New User Button
-        Button newUserButton = new Button("New User");
+        // Existing User Button
+        Button newUserButton = new Button("Existing User");
         grid.add(newUserButton, 1, 5);
         newUserButton.setOnAction(e -> {
-//            primaryStage.setScene(new NewStudentPage(primaryStage));
+            primaryStage.setScene(new StudentLoginPage(primaryStage));
         });
 
         // Back Button
@@ -73,10 +93,5 @@ public class NewStudentPage extends Scene {
         backButton.setOnAction(e -> {
             primaryStage.setScene(new WelcomePage(primaryStage));
         });
-    }
-
-    private boolean validateNewCreds(String username, String password, String confirm) {
-        // TODO
-        return true;
     }
 }

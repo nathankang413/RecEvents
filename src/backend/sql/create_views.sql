@@ -1,6 +1,6 @@
 -- run this in mySQL to create the views
 
-CREATE VIEW AvailableEvents AS
+CREATE OR REPLACE VIEW AvailableEvents AS
 SELECT E.id AS event_id
     , C.name AS class_name
     , C.price AS price

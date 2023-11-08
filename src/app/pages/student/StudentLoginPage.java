@@ -46,6 +46,10 @@ public class StudentLoginPage extends Scene {
         PasswordField passwordTextField = new PasswordField();
         grid.add(passwordTextField, 1, 2);
 
+        // Alert text
+        Label alertText = new Label("");
+        grid.add(alertText, 1, 5);
+
         // Login Button
         Button loginButton = new Button("Login");
         loginButton.setAlignment(Pos.BOTTOM_RIGHT);
@@ -53,6 +57,8 @@ public class StudentLoginPage extends Scene {
         loginButton.setOnAction(e -> {
             if (StudentValidation.validateLoginCreds(usernameTextField.getText(), passwordTextField.getText())) {
                 primaryStage.setScene(new StudentHomePage(primaryStage));
+            } else {
+                alertText.setText("Invalid username or password");
             }
         });
 

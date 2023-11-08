@@ -31,7 +31,7 @@ public class AvailableEventView {
 
     public static List<ColumnInfoTriple> getColumnInfo() {
         ArrayList<ColumnInfoTriple> info = new ArrayList<>();
-        info.add(new ColumnInfoTriple("event_id", "eventId", "Event ID"));
+//        info.add(new ColumnInfoTriple("event_id", "eventId", "Event ID"));
         info.add(new ColumnInfoTriple("class_name", "className", "Class Name"));
         info.add(new ColumnInfoTriple("price", "price", "Price"));
         info.add(new ColumnInfoTriple("start_time", "startTime", "Start Time"));
@@ -41,7 +41,7 @@ public class AvailableEventView {
     }
 
     public static void fillList(ObservableList<AvailableEventView> list) {
-        ResultSet rs = SqlConnector.runSql(sql);
+        ResultSet rs = SqlConnector.runQuery(sql);
         try {
             while (rs.next()) {
                 int eventId = rs.getInt("event_id");
