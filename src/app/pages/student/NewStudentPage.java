@@ -28,7 +28,7 @@ public class NewStudentPage extends Scene {
         grid.setPadding(new Insets(25, 25, 25, 25));
 
         // Title Text
-        Text sceneTitle = new Text("Student Login");
+        Text sceneTitle = new Text("New Student");
         sceneTitle.setFont(Font.font("Tahoma", 20));
         grid.add(sceneTitle, 0, 0, 2, 1);
 

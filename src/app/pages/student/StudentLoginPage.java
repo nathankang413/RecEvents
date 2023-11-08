@@ -13,6 +13,8 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import backend.queries.StudentValidation;
+
 import static app.Constants.WINDOW_HEIGHT;
 import static app.Constants.WINDOW_WIDTH;
 
@@ -28,7 +30,7 @@ public class StudentLoginPage extends Scene {
         grid.setPadding(new Insets(25,25,25,25));
 
         // Title Text
-        Text sceneTitle = new Text("New Student");
+        Text sceneTitle = new Text("Student Login");
         sceneTitle.setFont(Font.font("Tahoma", 20));
         grid.add(sceneTitle, 0, 0, 2, 1);
 
@@ -49,7 +51,7 @@ public class StudentLoginPage extends Scene {
         loginButton.setAlignment(Pos.BOTTOM_RIGHT);
         grid.add(loginButton, 1, 3);
         loginButton.setOnAction(e -> {
-            if (validateLogin(usernameTextField.getText(), passwordTextField.getText())) {
+            if (StudentValidation.validateLoginCreds(usernameTextField.getText(), passwordTextField.getText())) {
                 primaryStage.setScene(new StudentHomePage(primaryStage));
             }
         });
@@ -67,10 +69,5 @@ public class StudentLoginPage extends Scene {
         backButton.setOnAction(e -> {
             primaryStage.setScene(new WelcomePage(primaryStage));
         });
-    }
-
-    private boolean validateLogin(String username, String password) {
-        // TODO
-        return true;
     }
 }

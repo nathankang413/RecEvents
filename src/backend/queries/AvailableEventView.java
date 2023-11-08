@@ -1,6 +1,7 @@
-package backend.views;
+package backend.queries;
 
 import backend.ColumnInfoTriple;
+import backend.SqlConnector;
 import javafx.collections.ObservableList;
 
 import java.sql.ResultSet;
@@ -9,7 +10,9 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AvailableEvent {
+public class AvailableEventView {
+    public static String sql = "SELECT * FROM AvailableEvents";
+
     private String eventId;
     private String className;
     private String price;
@@ -17,7 +20,7 @@ public class AvailableEvent {
     private String endTime;
     private String instructor;
 
-    public AvailableEvent(String eventId, String className, String price, String startTime, String endTime, String instructor) {
+    public AvailableEventView(String eventId, String className, String price, String startTime, String endTime, String instructor) {
         this.eventId = eventId;
         this.className = className;
         this.price = price;
@@ -37,7 +40,8 @@ public class AvailableEvent {
         return info;
     }
 
-    public static void fillList(ResultSet rs, ObservableList<AvailableEvent> list) {
+    public static void fillList(ObservableList<AvailableEventView> list) {
+        ResultSet rs = SqlConnector.runSql(sql);
         try {
             while (rs.next()) {
                 int eventId = rs.getInt("event_id");
@@ -47,7 +51,7 @@ public class AvailableEvent {
                 Timestamp endTime = rs.getTimestamp("end_time");
                 String instructor = rs.getString("instructor_name");
 
-                list.add(new AvailableEvent(String.valueOf(eventId), className, String.format("$%.2f", price), startTime.toString(), endTime.toString(), instructor));
+                list.add(new AvailableEventView(String.valueOf(eventId), className, String.format("$%.2f", price), startTime.toString(), endTime.toString(), instructor));
             }
         } catch (SQLException e) {
             System.out.println("Error: " + e);
