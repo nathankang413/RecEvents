@@ -37,8 +37,6 @@ public class InstructorLoginPage extends TitledPage {
         // Back Button
         Button backButton = new Button("Back");
         grid.add(backButton, 0, 3);
-        backButton.setOnAction(e -> {
-            primaryStage.setScene(new WelcomePage(primaryStage));
-        });
+        backButton.setOnAction(e -> primaryStage.setScene(new WelcomePage(primaryStage)));
     }
 }

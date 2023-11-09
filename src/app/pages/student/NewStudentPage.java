@@ -67,17 +67,13 @@ public class NewStudentPage extends TitledPage {
         });
 
         // Existing User Button
-        Button newUserButton = new Button("Existing User");
-        grid.add(newUserButton, 1, 5);
-        newUserButton.setOnAction(e -> {
-            primaryStage.setScene(new StudentLoginPage(primaryStage));
-        });
+        Button existingUserButton = new Button("Existing User");
+        grid.add(existingUserButton, 1, 5);
+        existingUserButton.setOnAction(e -> primaryStage.setScene(new StudentLoginPage(primaryStage)));
 
         // Back Button
         Button backButton = new Button("Back");
         grid.add(backButton, 0, 4);
-        backButton.setOnAction(e -> {
-            primaryStage.setScene(new WelcomePage(primaryStage));
-        });
+        backButton.setOnAction(e -> primaryStage.setScene(new WelcomePage(primaryStage)));
     }
 }

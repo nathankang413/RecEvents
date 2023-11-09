@@ -17,15 +17,11 @@ public class WelcomePage extends TitledPage {
         // Instructor Button
         Button instructorButton = new Button("Instructor");
         grid.add(instructorButton, 0, 1);
-        instructorButton.setOnAction(e -> {
-            primaryStage.setScene(new InstructorLoginPage(primaryStage));
-        });
+        instructorButton.setOnAction(e -> primaryStage.setScene(new InstructorLoginPage(primaryStage)));
 
         // Student Button
         Button studentButton = new Button("Student");
         grid.add(studentButton, 0, 2);
-        studentButton.setOnAction(e -> {
-            primaryStage.setScene(new StudentLoginPage(primaryStage));
-        });
+        studentButton.setOnAction(e -> primaryStage.setScene(new StudentLoginPage(primaryStage)));
     }
 }

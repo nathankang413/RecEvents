@@ -49,15 +49,11 @@ public class StudentLoginPage extends TitledPage {
         // New User Button
         Button newUserButton = new Button("New User");
         grid.add(newUserButton, 1, 4);
-        newUserButton.setOnAction(e -> {
-            primaryStage.setScene(new NewStudentPage(primaryStage));
-        });
+        newUserButton.setOnAction(e -> primaryStage.setScene(new NewStudentPage(primaryStage)));
 
         // Back Button
         Button backButton = new Button("Back");
         grid.add(backButton, 0, 3);
-        backButton.setOnAction(e -> {
-            primaryStage.setScene(new WelcomePage(primaryStage));
-        });
+        backButton.setOnAction(e -> primaryStage.setScene(new WelcomePage(primaryStage)));
     }
 }
