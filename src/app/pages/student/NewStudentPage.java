@@ -1,37 +1,23 @@
 package app.pages.student;
 
+import app.components.TitledPage;
 import app.pages.WelcomePage;
-import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
-import javafx.scene.text.Font;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import backend.queries.StudentValidation;
 
-import static app.Constants.WINDOW_HEIGHT;
-import static app.Constants.WINDOW_WIDTH;
-
-public class NewStudentPage extends Scene {
+public class NewStudentPage extends TitledPage {
 
     public NewStudentPage(Stage primaryStage) {
-        super(new GridPane(), WINDOW_WIDTH, WINDOW_HEIGHT);
-
+        super(primaryStage, "New Student");
         GridPane grid = (GridPane) this.getRoot();
-        grid.setAlignment(Pos.CENTER);
-        grid.setHgap(10);
-        grid.setVgap(10);
-        grid.setPadding(new Insets(25, 25, 25, 25));
 
-        // Title Text
-        Text sceneTitle = new Text("New Student");
-        sceneTitle.setFont(Font.font("Tahoma", 20));
-        grid.add(sceneTitle, 0, 0, 2, 1);
+        // TODO: Name field
 
         // Username Label and Field
         Label usernameLabel = new Label("Username:");
@@ -59,7 +45,7 @@ public class NewStudentPage extends Scene {
         Button signupButton = new Button("Sign Up");
         signupButton.setAlignment(Pos.BOTTOM_RIGHT);
         grid.add(signupButton, 1, 4);
-        signupButton.setOnAction(e -> {
+        signupButton.setOnAction(e -> { // TODO: abstract this into a method
             if (usernameTextField.getLength() == 0 || passwordTextField.getLength() == 0 || confirmPasswordField.getLength() == 0) {
                 errorLabel.setText("Please fill out all fields");
                 return;

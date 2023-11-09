@@ -4,19 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27f799d2-1e86-4931-86db-c3c496e19e9d" name="Changes" comment="DB connection">
+    <list default="true" id="27f799d2-1e86-4931-86db-c3c496e19e9d" name="Changes" comment="gitignore">
+      <change afterPath="$PROJECT_DIR$/src/app/components/TitledPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/WelcomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/WelcomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/instructor/InstructorLoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/instructor/InstructorLoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/student/EventsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/student/EventsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/student/NewStudentPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/student/NewStudentPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/student/StudentHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/student/StudentHomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/student/StudentLoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/student/StudentLoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/SqlConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/SqlConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/queries/AvailableEventView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/queries/AvailableEventView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/queries/StudentValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/queries/StudentValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/sql/create_tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/sql/create_tables.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/sql/create_views.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/sql/create_views.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/sql/insert_samples.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/sql/insert_samples.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/TestPageApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/TestPageApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +52,7 @@
       <recent name="backend.Constants" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestOnePage">
+  <component name="RunManager" selected="Application.RecEvents">
     <configuration name="RecEvents" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="app.RecEventsApplication" />
       <module name="RecEvents" />
@@ -157,7 +153,28 @@
       <option name="project" value="LOCAL" />
       <updated>1699477677155</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Student creation and login">
+      <created>1699483380380</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1699483380380</updated>
+    </task>
+    <task id="LOCAL-00012" summary="gitignore">
+      <created>1699483551214</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1699483551214</updated>
+    </task>
+    <task id="LOCAL-00013" summary="gitignore">
+      <created>1699483622440</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1699483622440</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -171,6 +188,8 @@
     <MESSAGE value="Formatting" />
     <MESSAGE value="Linking pages together" />
     <MESSAGE value="DB connection" />
-    <option name="LAST_COMMIT_MESSAGE" value="DB connection" />
+    <MESSAGE value="Student creation and login" />
+    <MESSAGE value="gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
   </component>
 </project>
