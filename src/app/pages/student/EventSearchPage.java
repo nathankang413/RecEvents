@@ -13,8 +13,8 @@ import javafx.stage.Stage;
 import static app.Constants.WINDOW_WIDTH;
 import static javafx.collections.FXCollections.observableArrayList;
 
-public class EventsPage extends TitledPage {
-    public EventsPage (Stage primaryStage) {
+public class EventSearchPage extends TitledPage {
+    public EventSearchPage(Stage primaryStage) {
         super(primaryStage, "Events");
         GridPane grid = (GridPane) this.getRoot();
 
