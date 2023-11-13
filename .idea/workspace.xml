@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="27f799d2-1e86-4931-86db-c3c496e19e9d" name="Changes" comment="gitignore" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="module-info" />
+        <option value="Record" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2XoOg3Ntp1LBbqAEmt7iuC6fF0B" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "17",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="backend.Constants" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.RecEvents">
+    <configuration name="RecEvents" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="app.RecEventsApplication" />
+      <module name="RecEvents" />
+      <option name="VM_PARAMETERS" value="--module-path ./javafx-sdk-21.0.1/lib --add-modules javafx.controls,javafx.fxml " />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestOnePage" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="TestPageApplication" />
+      <module name="RecEvents" />
+      <option name="VM_PARAMETERS" value="--module-path ../javafx-sdk-21.0.1/lib --add-modules javafx.controls,javafx.fxml " />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.RecEvents" />
+      <item itemvalue="Application.TestOnePage" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="27f799d2-1e86-4931-86db-c3c496e19e9d" name="Changes" comment="" />
+      <created>1699292076388</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1699292076388</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Init">
+      <created>1699293223717</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1699293223717</updated>
+    </task>
+    <task id="LOCAL-00002" summary="mySQL driver">
+      <created>1699460419715</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1699460419715</updated>
+    </task>
+    <task id="LOCAL-00003" summary="DB table setup">
+      <created>1699475552249</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1699475552249</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Random Stuff">
+      <created>1699475575590</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699475575590</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Pages">
+      <created>1699475623091</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699475623091</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Infrastructure">
+      <created>1699475661331</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699475661331</updated>
+    </task>
+    <task id="LOCAL-00007" summary="DB interaction">
+      <created>1699475678653</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1699475678653</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Formatting">
+      <created>1699476003137</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699476003137</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Linking pages together">
+      <created>1699476710354</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1699476710354</updated>
+    </task>
+    <task id="LOCAL-00010" summary="DB connection">
+      <created>1699477677155</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1699477677155</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Student creation and login">
+      <created>1699483380380</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1699483380380</updated>
+    </task>
+    <task id="LOCAL-00012" summary="gitignore">
+      <created>1699483551214</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1699483551214</updated>
+    </task>
+    <task id="LOCAL-00013" summary="gitignore">
+      <created>1699483622440</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1699483622440</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Abstract out root grid and title">
+      <created>1699569400724</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1699569400724</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Lambdas for button handling">
+      <created>1699569590279</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1699569590279</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Cleanup">
+      <created>1699570124571</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1699570124571</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Student Home Page shows student signups">
+      <created>1699894333955</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1699894333955</updated>
+    </task>
+    <task id="LOCAL-00018" summary="formatting">
+      <created>1699896095004</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1699896095004</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Finish Student Home page functionality">
+      <created>1699897422551</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1699897422551</updated>
+    </task>
+    <task id="LOCAL-00020" summary="gitignore">
+      <created>1699897896186</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1699897896186</updated>
+    </task>
+    <task id="LOCAL-00021" summary="gitignore">
+      <created>1699898211997</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1699898211997</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Init" />
+    <MESSAGE value="mySQL driver" />
+    <MESSAGE value="DB table setup" />
+    <MESSAGE value="Random Stuff" />
+    <MESSAGE value="Pages" />
+    <MESSAGE value="Infrastructure" />
+    <MESSAGE value="DB interaction" />
+    <MESSAGE value="Formatting" />
+    <MESSAGE value="Linking pages together" />
+    <MESSAGE value="DB connection" />
+    <MESSAGE value="Student creation and login" />
+    <MESSAGE value="Abstract out root grid and title" />
+    <MESSAGE value="Lambdas for button handling" />
+    <MESSAGE value="Cleanup" />
+    <MESSAGE value="Student Home Page shows student signups" />
+    <MESSAGE value="formatting" />
+    <MESSAGE value="Finish Student Home page functionality" />
+    <MESSAGE value="gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
+  </component>
+</project>
