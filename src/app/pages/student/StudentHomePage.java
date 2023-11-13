@@ -1,6 +1,7 @@
 package app.pages.student;
 
 import app.components.TitledPage;
+import app.pages.WelcomePage;
 import backend.queries.ColumnInfoTriple;
 import backend.queries.StudentSignupsView;
 import javafx.collections.ObservableList;
@@ -28,7 +29,14 @@ public class StudentHomePage extends TitledPage {
         Button profileButton = new Button("Profile");
         grid.add(profileButton, 0, 2);
         profileButton.setOnAction(e -> {
-//            primaryStage.setScene(new StudentProfilePage(primaryStage));
+            primaryStage.setScene(new StudentProfilePage(primaryStage));
+        });
+
+        // Logout button
+        Button logoutButton = new Button("Log out");
+        grid.add(logoutButton, 1, 2);
+        logoutButton.setOnAction(e -> {
+            primaryStage.setScene(new WelcomePage(primaryStage));
         });
 
         // Signups table
@@ -36,7 +44,7 @@ public class StudentHomePage extends TitledPage {
         ObservableList<StudentSignupsView> list = observableArrayList();
         table.setItems(list);
         table.setPrefWidth(WINDOW_WIDTH);
-        grid.add(table, 0, 3);
+        grid.add(table, 0, 3, 3, 1);
 
         // Create columns and populate table
         for (ColumnInfoTriple info : StudentSignupsView.getColumnInfo()) {
