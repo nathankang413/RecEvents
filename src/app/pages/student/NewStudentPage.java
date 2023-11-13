@@ -59,8 +59,9 @@ public class NewStudentPage extends TitledPage {
                 return;
             }
             // TODO: name field
-            if (StudentValidation.insertNewCreds("Example name", usernameTextField.getText(), passwordTextField.getText())) {
-                primaryStage.setScene(new StudentHomePage(primaryStage));
+            int student_id = StudentValidation.insertNewCreds("Example name", usernameTextField.getText(), passwordTextField.getText());
+            if (student_id >= 0) {
+                primaryStage.setScene(new StudentHomePage(primaryStage, student_id));
             } else {
                 errorLabel.setText("Error creating account");
             }

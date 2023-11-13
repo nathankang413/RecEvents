@@ -1,7 +1,7 @@
 package app.pages.student;
 
 import app.components.TitledPage;
-import backend.ColumnInfoTriple;
+import backend.queries.ColumnInfoTriple;
 import backend.queries.AvailableEventView;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
@@ -36,6 +36,7 @@ public class EventSearchPage extends TitledPage {
         // Handle clicks
         table.setOnMouseClicked(e -> {
             if (e.getClickCount() == 2) {
+                // TODO
                 AvailableEventView event = table.getSelectionModel().getSelectedItem();
                 System.out.println(event.getEventId());
             }

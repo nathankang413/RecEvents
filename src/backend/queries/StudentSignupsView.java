@@ -5,29 +5,28 @@ import javafx.collections.ObservableList;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AvailableEventView {
-    public static final String SQL = "SELECT * FROM AvailableEvents";
+public class StudentSignupsView {
+    public static final String SQL = "SELECT * FROM StudentSignups WHERE student_id = ";
 
+    private String studentId;
     private String eventId;
     private String className;
     private String room;
-    private String price;
     private String startTime;
     private String endTime;
-    private String instructor;
+    private String instructorName;
 
-    public AvailableEventView(String eventId, String className, String room, String price, String startTime, String endTime, String instructor) {
+    public StudentSignupsView(String studentId, String eventId, String className, String room, String startTime, String endTime, String instructorName) {
+        this.studentId = studentId;
         this.eventId = eventId;
         this.className = className;
         this.room = room;
-        this.price = price;
         this.startTime = startTime;
         this.endTime = endTime;
-        this.instructor = instructor;
+        this.instructorName = instructorName;
     }
 
     /**
@@ -36,34 +35,37 @@ public class AvailableEventView {
      */
     public static List<ColumnInfoTriple> getColumnInfo() {
         ArrayList<ColumnInfoTriple> info = new ArrayList<>();
+//        info.add(new ColumnInfoTriple("student_id", "studentId", "Student ID"));
 //        info.add(new ColumnInfoTriple("event_id", "eventId", "Event ID"));
         info.add(new ColumnInfoTriple("class_name", "className", "Class Name"));
         info.add(new ColumnInfoTriple("room", "room", "Room"));
-        info.add(new ColumnInfoTriple("price", "price", "Price"));
         info.add(new ColumnInfoTriple("start_time", "startTime", "Start Time"));
         info.add(new ColumnInfoTriple("end_time", "endTime", "End Time"));
-        info.add(new ColumnInfoTriple("instructor_name", "instructor", "Instructor"));
+        info.add(new ColumnInfoTriple("instructor_name", "instructorName", "Instructor"));
         return info;
     }
 
-    public static void fillList(ObservableList<AvailableEventView> list) {
-        ResultSet rs = SqlConnector.runQuery(SQL);
+    public static void fillList(ObservableList<StudentSignupsView> list, int student_id) {
+        ResultSet rs = SqlConnector.runQuery(SQL + student_id);
         try {
             while (rs.next()) {
-                int eventId = rs.getInt("event_id");
-                String className = rs.getString("class_name");
-                String room = rs.getString("room");
-                double price = rs.getDouble("price");
-                Timestamp startTime = rs.getTimestamp("start_time");
-                Timestamp endTime = rs.getTimestamp("end_time");
-                String instructor = rs.getString("instructor_name");
-
-                list.add(new AvailableEventView(String.valueOf(eventId), className, room, String.format("$%.2f", price), startTime.toString(), endTime.toString(), instructor));
+                list.add(new StudentSignupsView(
+                        rs.getString("student_id"),
+                        rs.getString("event_id"),
+                        rs.getString("class_name"),
+                        rs.getString("room"),
+                        rs.getString("start_time"),
+                        rs.getString("end_time"),
+                        rs.getString("instructor_name")
+                ));
             }
         } catch (SQLException e) {
             System.out.println("Error: " + e);
         }
+    }
 
+    public String getStudentId() {
+        return studentId;
     }
 
     public String getEventId() {
@@ -78,10 +80,6 @@ public class AvailableEventView {
         return room;
     }
 
-    public String getPrice() {
-        return price;
-    }
-
     public String getStartTime() {
         return startTime;
     }
@@ -90,8 +88,9 @@ public class AvailableEventView {
         return endTime;
     }
 
-    public String getInstructor() {
-        return instructor;
+    public String getInstructorName() {
+        return instructorName;
     }
+
 
 }
