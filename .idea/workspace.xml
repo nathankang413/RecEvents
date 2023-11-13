@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27f799d2-1e86-4931-86db-c3c496e19e9d" name="Changes" comment="Cleanup">
-      <change afterPath="$PROJECT_DIR$/src/backend/queries/StudentSignupsView.java" afterDir="false" />
+    <list default="true" id="27f799d2-1e86-4931-86db-c3c496e19e9d" name="Changes" comment="Student Home Page shows student signups">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/student/EventSearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/student/EventSearchPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/student/NewStudentPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/student/NewStudentPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/student/StudentHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/student/StudentHomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/student/StudentLoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/student/StudentLoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/student/StudentProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/student/StudentProfilePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/ColumnInfoTriple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/queries/ColumnInfoTriple.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/backend/queries/AvailableEventView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/queries/AvailableEventView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/queries/StudentValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/queries/StudentValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/sql/create_views.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/sql/create_views.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/sql/drop_views.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/sql/drop_views.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699570124571</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Student Home Page shows student signups">
+      <created>1699894333955</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1699894333955</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -232,6 +229,7 @@
     <MESSAGE value="Abstract out root grid and title" />
     <MESSAGE value="Lambdas for button handling" />
     <MESSAGE value="Cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
+    <MESSAGE value="Student Home Page shows student signups" />
+    <option name="LAST_COMMIT_MESSAGE" value="Student Home Page shows student signups" />
   </component>
 </project>

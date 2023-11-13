@@ -50,15 +50,15 @@ public class AvailableEventView {
         ResultSet rs = SqlConnector.runQuery(SQL);
         try {
             while (rs.next()) {
-                int eventId = rs.getInt("event_id");
-                String className = rs.getString("class_name");
-                String room = rs.getString("room");
-                double price = rs.getDouble("price");
-                Timestamp startTime = rs.getTimestamp("start_time");
-                Timestamp endTime = rs.getTimestamp("end_time");
-                String instructor = rs.getString("instructor_name");
-
-                list.add(new AvailableEventView(String.valueOf(eventId), className, room, String.format("$%.2f", price), startTime.toString(), endTime.toString(), instructor));
+                list.add(new AvailableEventView(
+                        rs.getString("event_id"),
+                        rs.getString("class_name"),
+                        rs.getString("room"),
+                        String.format("$%.2f", rs.getDouble("price")),
+                        rs.getString("start_time"),
+                        rs.getString("end_time"),
+                        rs.getString("instructor_name")
+                ));
             }
         } catch (SQLException e) {
             System.out.println("Error: " + e);
