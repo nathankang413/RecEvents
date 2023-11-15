@@ -23,7 +23,7 @@ public class StudentHomePage extends TitledPage {
         // Event Search Button
         Button eventSearchButton = new Button("Event Search");
         grid.add(eventSearchButton, 0, 1);
-        eventSearchButton.setOnAction(e -> primaryStage.setScene(new EventSearchPage(primaryStage)));
+        eventSearchButton.setOnAction(e -> primaryStage.setScene(new EventSearchPage(primaryStage, student_id)));
 
         // Profile button
         Button profileButton = new Button("Profile");

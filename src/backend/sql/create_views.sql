@@ -20,8 +20,18 @@ WHERE E.seats > (
     )
 ;
 
+CREATE OR REPLACE VIEW EventSignups AS
+SELECT E.id AS event_id
+    , E.seats AS seats
+    , COUNT(S.id) AS signups
+FROM Events AS E
+LEFT JOIN Signups AS S
+    ON E.id = S.event_id
+GROUP BY E.id, E.seats
+;
+
 CREATE OR REPLACE VIEW StudentSignups AS
-SELECT S.id AS student_id
+SELECT S.student_id AS student_id
     , E.id AS event_id
     , C.name AS class_name
     , E.room AS room
