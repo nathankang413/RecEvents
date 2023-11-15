@@ -64,6 +64,10 @@ public class StudentSignupsView {
         }
     }
 
+    public static void removeSignup(int student_id, int event_id) {
+        SqlConnector.runUpdate("DELETE FROM Signups WHERE student_id = " + student_id + " AND event_id = " + event_id);
+    }
+
     public String getStudentId() {
         return studentId;
     }

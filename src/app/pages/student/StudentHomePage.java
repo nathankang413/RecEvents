@@ -2,6 +2,7 @@ package app.pages.student;
 
 import app.components.TitledPage;
 import app.pages.WelcomePage;
+import backend.queries.AvailableEventView;
 import backend.queries.ColumnInfoTriple;
 import backend.queries.StudentSignupsView;
 import javafx.collections.ObservableList;
@@ -53,6 +54,16 @@ public class StudentHomePage extends TitledPage {
             table.getColumns().add(col);
         }
         StudentSignupsView.fillList(list, student_id);
+
+        // Handle clicks
+        table.setOnMouseClicked(e -> {
+            if (e.getClickCount() == 2) {
+                StudentSignupsView signup = table.getSelectionModel().getSelectedItem();
+                System.out.println("Clicked on " + signup.getEventId() + " " + signup.getClassName());
+                StudentSignupsView.removeSignup(student_id, Integer.parseInt(signup.getEventId()));
+                primaryStage.setScene(new StudentHomePage(primaryStage, student_id));
+            }
+        });
 
     }
 }
