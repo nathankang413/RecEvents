@@ -17,7 +17,11 @@ public class NewStudentPage extends TitledPage {
         super(primaryStage, "New Student");
         GridPane grid = (GridPane) this.getRoot();
 
-        // TODO: Name field
+        // Name label and field
+        Label nameLabel = new Label("Full Name:");
+        grid.add(nameLabel, 0, 0);
+        TextField nameTextField = new TextField();
+        grid.add(nameTextField, 1, 0);
 
         // Username Label and Field
         Label usernameLabel = new Label("Username:");
@@ -58,8 +62,7 @@ public class NewStudentPage extends TitledPage {
                 errorLabel.setText("Passwords do not match");
                 return;
             }
-            // TODO: name field
-            int student_id = StudentValidation.insertNewCreds("Example name", usernameTextField.getText(), passwordTextField.getText());
+            int student_id = StudentValidation.insertNewCreds(nameTextField.getText(), usernameTextField.getText(), passwordTextField.getText());
             if (student_id >= 0) {
                 primaryStage.setScene(new StudentHomePage(primaryStage, student_id));
             } else {

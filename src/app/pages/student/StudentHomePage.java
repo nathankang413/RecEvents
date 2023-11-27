@@ -21,6 +21,8 @@ public class StudentHomePage extends TitledPage {
         super(primaryStage, "Student Home");
         GridPane grid = (GridPane) this.getRoot();
 
+        // TODO: display full name and/or username
+
         // Event Search Button
         Button eventSearchButton = new Button("Event Search");
         grid.add(eventSearchButton, 0, 1);
@@ -30,7 +32,7 @@ public class StudentHomePage extends TitledPage {
         Button profileButton = new Button("Profile");
         grid.add(profileButton, 0, 2);
         profileButton.setOnAction(e -> {
-            primaryStage.setScene(new StudentProfilePage(primaryStage));
+            primaryStage.setScene(new StudentProfilePage(primaryStage, student_id));
         });
 
         // Logout button
