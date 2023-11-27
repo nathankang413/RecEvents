@@ -9,8 +9,6 @@ public class StudentProfile {
     private int student_id;
     private String full_name;
     private String username;
-    private String password;
-    private String confirm_password;
 
     public StudentProfile(int student_id) {
         ResultSet rs = SqlConnector.runQuery(String.format("SELECT * FROM Students WHERE id = %d;", student_id));
@@ -27,8 +25,6 @@ public class StudentProfile {
             this.student_id = rs.getInt("id");
             this.full_name = rs.getString("full_name");
             this.username = rs.getString("username");
-            this.password = "";
-            this.confirm_password = "";
 
         } catch (Exception e) {
             System.out.println("Error retrieving student with id " + student_id);
@@ -44,26 +40,9 @@ public class StudentProfile {
     }
 
     public boolean changeUsername(String username) {
-        // TODO: Check if username already exists
-        ResultSet rs = SqlConnector.runQuery(String.format("SELECT COUNT(*) AS n FROM Students WHERE username = '%s';", username));
-        if (rs == null) {
-            System.out.println("Error counting Students" + username);
+        if (StudentValidation.usernameExists(username)) {
             return false;
         }
-        try {
-            if (!rs.next()) {
-                System.out.println("Error counting Students" + username);
-                return false;
-            }
-            if (rs.getInt("n") > 0) {
-                System.out.println("Username already exists");
-                return false;
-            }
-        } catch (Exception e) {
-            System.out.println("Error counting Students" + username);
-            return false;
-        }
-
         if (SqlConnector.runUpdate(String.format("UPDATE Students SET username = '%s' WHERE id = %d;", username, student_id))) {
             this.username = username;
             return true;
@@ -76,8 +55,6 @@ public class StudentProfile {
             return false;
         }
         if (SqlConnector.runUpdate(String.format("UPDATE Students SET pw_hash = '%d' WHERE id = %d;", password.hashCode(), student_id))) {
-            this.password = password;
-            this.confirm_password = confirm_password;
             return true;
         }
         return false;
@@ -94,13 +71,4 @@ public class StudentProfile {
     public String getUsername() {
         return username;
     }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public String getConfirm_password() {
-        return confirm_password;
-    }
-
 }
