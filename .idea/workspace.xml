@@ -5,7 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27f799d2-1e86-4931-86db-c3c496e19e9d" name="Changes" comment="gitignore">
+      <change afterPath="$PROJECT_DIR$/resources/fxml/EventSearchPage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/fxml/NewStudentPage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/fxml/StudentProfilePage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/fxml/WelcomePage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/ScreenController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/controllers/EventSearchPageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/controllers/StudentProfilePageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/controllers/WelcomePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecEvents.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RecEvents.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/RecEventsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/RecEventsApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +28,13 @@
       <list>
         <option value="module-info" />
         <option value="Record" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -33,24 +48,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "true",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "/Users/gabrielhervias/FallQ2023/CSC365/Project/RecEvents/resources/fxml",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/fxml" />
+    </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="backend.Constants" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="app.pages.controllers" />
     </key>
   </component>
   <component name="RunManager" selected="Application.RecEvents">
     <configuration name="RecEvents" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="17 (2)" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="app.RecEventsApplication" />
       <module name="RecEvents" />
       <option name="VM_PARAMETERS" value="--module-path ./javafx-sdk-21.0.1/lib --add-modules javafx.controls,javafx.fxml " />
@@ -79,6 +105,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1699292076388</updated>
+      <workItem from="1700068178248" duration="68000" />
+      <workItem from="1700068251277" duration="552000" />
+      <workItem from="1700679501634" duration="32000" />
+      <workItem from="1700849653491" duration="11268000" />
+      <workItem from="1701201764005" duration="5007000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1699293223717</created>
@@ -230,6 +261,9 @@
     <option name="localTasksCounter" value="22" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -261,5 +295,22 @@
     <MESSAGE value="Finish Student Home page functionality" />
     <MESSAGE value="gitignore" />
     <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/app/pages/controllers/WelcomePageController.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/app/pages/controllers/EventSearchPageController.java</url>
+          <line>28</line>
+          <properties field="errorLabel" class="app.pages.controllers.EventSearchPageController" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
