@@ -31,7 +31,6 @@ public class RecEventsApplication extends Application {
             ScreenController.mainStage = primaryStage;
             ScreenController.addScreen("Welcome Page", scene);
             ScreenController.activate("Welcome Page");
-            System.out.println("here");
         }
         catch (Exception e){
             e.printStackTrace();
