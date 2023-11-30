@@ -3,9 +3,14 @@ package app;
 import app.pages.WelcomePage;
 import backend.SqlConnector;
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class RecEventsApplication extends Application {
+    public ScreenController screenController;
 
     public static void main(String[] args) {
         SqlConnector.init();
@@ -15,7 +20,21 @@ public class RecEventsApplication extends Application {
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("RecEvents");
-        primaryStage.setScene(new WelcomePage(primaryStage));
-        primaryStage.show();
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/fxml/WelcomePage.fxml"));
+            Parent root = loader.load();
+
+            Scene scene = new Scene(root);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+            ScreenController.mainStage = primaryStage;
+            ScreenController.addScreen("Welcome Page", scene);
+            ScreenController.activate("Welcome Page");
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
 }
