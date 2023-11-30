@@ -38,7 +38,6 @@ public class NewStudentPageController {
             errorLabel.setText("Passwords do not match");
             return;
         }
-        // TODO: name field
         int student_id = StudentValidation.insertNewCreds(nameTextField.getText(), usernameTextField.getText(), passwordTextField.getText());
         if (student_id >= 0) {
             try {

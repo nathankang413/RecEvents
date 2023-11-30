@@ -17,6 +17,7 @@ public class StudentProfilePageController {
     StudentProfile data;
     @FXML
     TextField nameTextField, usernameTextField;
+    @FXML
     PasswordField passwordTextField, confirmPasswordTextField;
     @FXML
     Label errorLabel;

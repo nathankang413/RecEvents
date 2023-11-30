@@ -22,6 +22,7 @@ import javafx.stage.Stage;
 
 import static javafx.collections.FXCollections.observableArrayList;
 
+import javafx.scene.control.Button;
 public class StudentHomePageController {
     @FXML
     private Button logOutButton;
