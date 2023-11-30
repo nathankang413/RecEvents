@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27f799d2-1e86-4931-86db-c3c496e19e9d" name="Changes" comment="gitignore">
-      <change afterPath="$PROJECT_DIR$/src/app/pages/controllers/NewStudentPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/fxml/NewStudentPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fxml/NewStudentPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/RecEventsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/RecEventsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/fxml/StudentHomePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fxml/StudentHomePage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/fxml/StudentProfilePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fxml/StudentProfilePage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/controllers/NewStudentPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/controllers/NewStudentPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/controllers/StudentHomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/controllers/StudentHomePageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/controllers/StudentProfilePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/controllers/StudentProfilePageController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,6 +106,7 @@
       <workItem from="1700849653491" duration="11268000" />
       <workItem from="1701201764005" duration="5610000" />
       <workItem from="1701218120744" duration="1054000" />
+      <workItem from="1701310298746" duration="1007000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1699293223717</created>

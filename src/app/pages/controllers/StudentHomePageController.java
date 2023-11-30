@@ -4,19 +4,23 @@ import app.ScreenController;
 import app.pages.instructor.InstructorLoginPage;
 import app.pages.student.NewStudentPage;
 import app.pages.student.StudentLoginPage;
+import app.pages.student.StudentProfilePage;
+import backend.queries.ColumnInfoTriple;
+import backend.queries.StudentSignupsView;
 import backend.queries.StudentValidation;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+
+import static javafx.collections.FXCollections.observableArrayList;
 
 public class StudentHomePageController {
     @FXML
@@ -25,6 +29,9 @@ public class StudentHomePageController {
     private Button profileButton;
     @FXML
     private Button eventSearchButton;
+    @FXML
+    TableView<StudentSignupsView> table;
+    ObservableList<StudentSignupsView> list;
     int student_id;
 
     @FXML
@@ -42,8 +49,8 @@ public class StudentHomePageController {
             Parent root = loader.load();
 
             Scene scene = new Scene(root);
-            StudentHomePageController controller = loader.getController();
-//            controller.setSID(student_id);
+            StudentProfilePageController controller = loader.getController();
+            controller.setSID(student_id);
 
 
             ScreenController.addScreen("Student Profile Page", scene);
@@ -75,9 +82,21 @@ public class StudentHomePageController {
         }
 
     }
+    @FXML
+    public void initialize(){
+        list = observableArrayList();
+        table.setItems(list);
+        // Create columns and populate table
+        for (ColumnInfoTriple info : StudentSignupsView.getColumnInfo()) {
+            TableColumn<StudentSignupsView, String> col = new TableColumn<>(info.displayName);
+            col.setCellValueFactory(new PropertyValueFactory<>(info.varName));
+            table.getColumns().add(col);
+        }
+    }
 
 
     public void setSID(int student_id) {
         this.student_id = student_id;
+        StudentSignupsView.fillList(list, student_id);
     }
 }

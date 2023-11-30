@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 
 public class NewStudentPageController {
     @FXML
-    private TextField usernameTextField;
+    private TextField usernameTextField, nameTextField;
     @FXML
     private PasswordField passwordTextField, confirmPasswordField;
     @FXML
@@ -39,7 +39,7 @@ public class NewStudentPageController {
             return;
         }
         // TODO: name field
-        int student_id = StudentValidation.insertNewCreds("Example name", usernameTextField.getText(), passwordTextField.getText());
+        int student_id = StudentValidation.insertNewCreds(nameTextField.getText(), usernameTextField.getText(), passwordTextField.getText());
         if (student_id >= 0) {
             try {
 
@@ -61,4 +61,26 @@ public class NewStudentPageController {
         }
     }
 
+    @FXML
+    protected  void back(ActionEvent e){
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        ScreenController.activate("Welcome Page");
+    }
+
+    @FXML
+    protected void existingUser(ActionEvent e){
+        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        try {
+
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/fxml/StudentLoginPage.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            ScreenController.addScreen("Student Login Page", scene);
+            ScreenController.activate("Student Login Page");
+        }
+        catch(Exception exception){
+            exception.printStackTrace();
+        }
+    }
 }
