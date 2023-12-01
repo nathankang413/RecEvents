@@ -86,7 +86,7 @@ public class InstructorProfilePage extends TitledPage {
         ObservableList<InstructorClasses> list = observableArrayList();
         table.setItems(list);
         table.setPrefWidth(WINDOW_WIDTH);
-        grid.add(table, 0, 3, 3, 1);
+        grid.add(table, 0, 5, 3, 1);
 
         // Create columns and populate table
         for (ColumnInfoTriple info : InstructorClasses.getColumnInfo()) {
