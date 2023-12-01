@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class InstructorValidation {
-
     /**
      *
      * @param username
@@ -44,13 +43,13 @@ public class InstructorValidation {
             return false;
         }
     }
-/*
+
     public static int insertNewCreds(String fullname, String username, String password) {
         if (! SqlConnector.runUpdate(String.format("INSERT INTO Instructors (full_name, username, pw_hash) VALUES ('%s', '%s', '%d')", fullname, username, password.hashCode()))) {
             return -1;
         }
 
-        ResultSet rs = SqlConnector.runQuery(String.format("SELECT id FROM Students WHERE username = '%s'", username));
+        ResultSet rs = SqlConnector.runQuery(String.format("SELECT id FROM Instructors WHERE username = '%s'", username));
         if (rs == null) return -1;
         try {
             if (!rs.next()) return -1;
@@ -60,6 +59,5 @@ public class InstructorValidation {
             return -1;
         }
     }
-*/
 
 }
