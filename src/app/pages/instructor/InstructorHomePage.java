@@ -44,6 +44,13 @@ public class InstructorHomePage extends TitledPage {
             primaryStage.setScene(new WelcomePage(primaryStage));
         });
 
+        // New Event Button
+        Button eventButton = new Button("New Event");
+        grid.add(eventButton, 1, 2);
+        eventButton.setOnAction(e -> {
+            primaryStage.setScene(new WelcomePage(primaryStage));
+        });
+
         // Signups table
         TableView<InstructorClassesView> table = new TableView<>();
         ObservableList<InstructorClassesView> list = observableArrayList();

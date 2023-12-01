@@ -1,13 +1,18 @@
 package app.pages.instructor;
 
 import app.components.TitledPage;
+import backend.queries.ColumnInfoTriple;
+import backend.queries.InstructorClasses;
 import backend.queries.InstructorProfile;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import backend.queries.StudentSignupsView;
+import javafx.collections.ObservableList;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+
+import static app.Constants.WINDOW_WIDTH;
+import static javafx.collections.FXCollections.observableArrayList;
 
 public class InstructorProfilePage extends TitledPage {
     public InstructorProfilePage(Stage primaryStage, int id) {
@@ -74,6 +79,22 @@ public class InstructorProfilePage extends TitledPage {
                 errorLabel.setText("Error changing password");
             }
         });
+
+
+        // Signups table
+        TableView<InstructorClasses> table = new TableView<>();
+        ObservableList<InstructorClasses> list = observableArrayList();
+        table.setItems(list);
+        table.setPrefWidth(WINDOW_WIDTH);
+        grid.add(table, 0, 3, 3, 1);
+
+        // Create columns and populate table
+        for (ColumnInfoTriple info : InstructorClasses.getColumnInfo()) {
+            TableColumn<InstructorClasses, String> col = new TableColumn<>(info.displayName);
+            col.setCellValueFactory(new PropertyValueFactory<>(info.varName));
+            table.getColumns().add(col);
+        }
+        InstructorClasses.fillList(list, id);
 
         // Back button
         Button backButton = new Button("Back");
