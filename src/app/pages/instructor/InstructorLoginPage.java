@@ -2,6 +2,8 @@ package app.pages.instructor;
 
 import app.components.TitledPage;
 import app.pages.WelcomePage;
+import app.pages.student.StudentHomePage;
+import backend.queries.InstructorValidation;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -27,11 +29,22 @@ public class InstructorLoginPage extends TitledPage {
         PasswordField passwordTextField = new PasswordField();
         grid.add(passwordTextField, 1, 2);
 
+
+        // Alert text
+        Label alertText = new Label("");
+        grid.add(alertText, 1, 5);
+
         // Login Button
         Button loginButton = new Button("Login");
         grid.add(loginButton, 1, 3);
         loginButton.setOnAction(e -> {
 //            primaryStage.setScene(new InstructorMainPage(primaryStage));
+            int instructor_id = InstructorValidation.validateLoginCreds(usernameTextField.getText(), passwordTextField.getText());
+            if (instructor_id >= 0) {
+                primaryStage.setScene(new InstructorHomePage(primaryStage, instructor_id));
+            } else {
+                alertText.setText("Invalid username or password");
+            }
         });
 
         // Back Button
