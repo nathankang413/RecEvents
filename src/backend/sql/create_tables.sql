@@ -38,4 +38,5 @@ CREATE TABLE IF NOT EXISTS Signups (
     event_id INT NOT NULL,
     FOREIGN KEY (student_id) REFERENCES Students(id),
     FOREIGN KEY (event_id) REFERENCES Events(id)
+        ON DELETE CASCADE
 );
