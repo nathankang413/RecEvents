@@ -1,4 +1,4 @@
-package app;
+package deprecated;
 
 public final class Constants {
     // JavaFX info

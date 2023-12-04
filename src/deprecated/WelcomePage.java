@@ -1,7 +1,7 @@
 package deprecated;
 
 import deprecated.components.TitledPage;
-import app.pages.instructor.InstructorLoginPage;
+import deprecated.instructor.InstructorLoginPage;
 import deprecated.student.StudentLoginPage;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;

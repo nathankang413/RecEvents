@@ -1,5 +1,4 @@
-import app.pages.instructor.CreateEvent;
-import app.pages.instructor.InstructorProfilePage;
+import deprecated.instructor.CreateEvent;
 import app.pages.student.*;
 import backend.SqlConnector;
 import javafx.application.Application;

@@ -1,4 +1,4 @@
-package app.pages.instructor;
+package deprecated.instructor;
 
 import deprecated.components.TitledPage;
 import deprecated.WelcomePage;

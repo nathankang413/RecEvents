@@ -12,7 +12,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-import static app.Constants.WINDOW_WIDTH;
+import static deprecated.Constants.WINDOW_WIDTH;
 import static javafx.collections.FXCollections.observableArrayList;
 
 public class EventSearchPage extends TitledPage {

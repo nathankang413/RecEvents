@@ -1,6 +1,6 @@
 package controllers;
 import app.ScreenController;
-import app.pages.instructor.InstructorLoginPage;
+import deprecated.instructor.InstructorLoginPage;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

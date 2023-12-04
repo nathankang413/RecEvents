@@ -8,8 +8,8 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-import static app.Constants.WINDOW_HEIGHT;
-import static app.Constants.WINDOW_WIDTH;
+import static deprecated.Constants.WINDOW_HEIGHT;
+import static deprecated.Constants.WINDOW_WIDTH;
 
 public class TitledPage extends Scene {
     protected Stage primaryStage;
