@@ -2,10 +2,8 @@ package app.pages.instructor;
 
 import app.components.TitledPage;
 import app.pages.WelcomePage;
-import backend.queries.AvailableEventView;
 import backend.queries.ColumnInfoTriple;
 import backend.queries.InstructorClassesView;
-import backend.queries.StudentSignupsView;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
@@ -22,12 +20,6 @@ public class InstructorHomePage extends TitledPage {
         super(primaryStage, "Instructor Home");
         GridPane grid = (GridPane) this.getRoot();
 
-        /*
-        // Event Search Button
-        Button eventSearchButton = new Button("Event Search");
-        grid.add(eventSearchButton, 0, 1);
-        eventSearchButton.setOnAction(e -> primaryStage.setScene(new EventSearchPage(primaryStage, id)));
-    */
         // Profile button
         Button profileButton = new Button("Profile");
         grid.add(profileButton, 0, 2);

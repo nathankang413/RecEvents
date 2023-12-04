@@ -2,7 +2,9 @@ package app.pages.instructor;
 
 import app.components.TitledPage;
 import app.pages.student.StudentHomePage;
+import backend.queries.AddClass;
 import backend.queries.StudentProfile;
+import backend.queries.StudentSignupsView;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -31,9 +33,13 @@ public class CreateClass extends TitledPage {
         TextField priceField = new TextField();
         grid.add(priceField, 1, 3);
 
-        Button AddEventButton = new Button("Add Event");
+        Button AddEventButton = new Button("Add Class");
         grid.add(AddEventButton, 0, 5);
-        AddEventButton.setOnAction(e -> {});
+        AddEventButton.setOnAction(e -> {
+            AddClass.addClass(nameTextField.getText(), id,Double.parseDouble(priceField.getText()));
+            primaryStage.setScene(new CreateEvent(primaryStage, id));
+
+        });
 
         Button backButton = new Button("Back");
         grid.add(backButton, 1, 5);

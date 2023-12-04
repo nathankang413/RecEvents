@@ -43,5 +43,6 @@
         <jarDirectory url="file://$MODULE_DIR$/mysql-connector-j-8.2.0" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="lib" level="application" />
   </component>
 </module>

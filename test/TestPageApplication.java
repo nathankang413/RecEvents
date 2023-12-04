@@ -1,3 +1,4 @@
+import app.pages.instructor.CreateEvent;
 import app.pages.instructor.InstructorProfilePage;
 import app.pages.student.*;
 import backend.SqlConnector;
@@ -17,7 +18,7 @@ public class TestPageApplication extends Application {
         SqlConnector.init();
 
         // NOTE: choose the page that you want to test
-        Scene page = new InstructorProfilePage(primaryStage, 1);
+        Scene page = new CreateEvent(primaryStage, 1);
 
         primaryStage.setScene(page);
         primaryStage.show();
