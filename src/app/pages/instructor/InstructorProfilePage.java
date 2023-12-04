@@ -1,10 +1,8 @@
 package app.pages.instructor;
 
 import app.components.TitledPage;
-import backend.queries.ColumnInfoTriple;
-import backend.queries.InstructorClasses;
-import backend.queries.InstructorProfile;
-import backend.queries.StudentSignupsView;
+import app.pages.student.StudentHomePage;
+import backend.queries.*;
 import javafx.collections.ObservableList;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -101,6 +99,16 @@ public class InstructorProfilePage extends TitledPage {
         grid.add(backButton, 0, 6);
         backButton.setOnAction(e -> {
             primaryStage.setScene(new InstructorHomePage(primaryStage, id));
+        });
+
+        // Handle clicks
+        table.setOnMouseClicked(e -> {
+            if (e.getClickCount() == 2) {
+                InstructorClasses signup = table.getSelectionModel().getSelectedItem();
+                System.out.println("Clicked on " + signup.getEventId() + " " + signup.getClassName());
+                InstructorClasses.removeClass(Integer.parseInt(signup.getEventId()));
+                primaryStage.setScene(new StudentHomePage(primaryStage, id));
+            }
         });
     }
 

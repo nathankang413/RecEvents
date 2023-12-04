@@ -22,8 +22,6 @@ public class InstructorHomePage extends TitledPage {
         super(primaryStage, "Instructor Home");
         GridPane grid = (GridPane) this.getRoot();
 
-        // TODO: display full name and/or username
-
         /*
         // Event Search Button
         Button eventSearchButton = new Button("Event Search");
@@ -48,7 +46,7 @@ public class InstructorHomePage extends TitledPage {
         Button eventButton = new Button("New Event");
         grid.add(eventButton, 1, 2);
         eventButton.setOnAction(e -> {
-            primaryStage.setScene(new WelcomePage(primaryStage));
+            primaryStage.setScene(new CreateEvent(primaryStage, id));
         });
 
         // Signups table

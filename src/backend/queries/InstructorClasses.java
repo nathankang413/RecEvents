@@ -52,9 +52,8 @@ public class InstructorClasses {
         }
     }
 
-    public static void removeClass(int event_id) {
-        SqlConnector.runUpdate("DELETE FROM Events WHERE id = " + event_id);
-        //TODO: CASCADE ON DELETE
+    public static void removeClass(int class_id) {
+        SqlConnector.runUpdate("DELETE FROM Classes WHERE id = " + class_id);
     }
 
     public String getStudentId() {
