@@ -1,4 +1,4 @@
-package app.pages.controllers.instructor;
+package controllers.instructor;
 import app.ScreenController;
 import backend.queries.InstructorValidation;
 import javafx.event.ActionEvent;

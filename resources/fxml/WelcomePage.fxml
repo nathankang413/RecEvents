@@ -6,7 +6,7 @@
 
 <!--<?import app.pages.controllers.WelcomePageController?>-->
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.pages.controllers.WelcomePageController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.WelcomePageController">
    <children>
       <Button fx:id="instructorButton" layoutX="266.0" layoutY="235.0" mnemonicParsing="false" onAction="#instructorButtonClick" text="Instructor" />
       <Button fx:id="studentButton" layoutX="270.0" layoutY="275.0" mnemonicParsing="false" onAction="#studentButtonClick" text="Student" />

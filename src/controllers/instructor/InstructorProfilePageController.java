@@ -1,6 +1,6 @@
-package app.pages.controllers.student;
+package controllers.instructor;
 import app.ScreenController;
-import backend.queries.StudentProfile;
+import backend.queries.InstructorProfile;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -10,23 +10,23 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class StudentProfilePageController implements StudentController {
+public class InstructorProfilePageController {
     @FXML
     private Button backButton, nameButton, usernameButton, passwordButton;
     @FXML
-    StudentProfile data;
+    InstructorProfile data;
     @FXML
     TextField nameTextField, usernameTextField;
     @FXML
     PasswordField passwordTextField, confirmPasswordTextField;
     @FXML
     Label errorLabel;
-    int student_id;
+    int Instructor_id;
 
     @FXML
     protected void back(ActionEvent e) {
         Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        ScreenController.activate("Student Home Page");
+        ScreenController.activate("Instructor Home Page");
     }
 
     @FXML
@@ -58,14 +58,14 @@ public class StudentProfilePageController implements StudentController {
 
     @FXML
 //    public void initialize() {
-//        this.data = new StudentProfile(student_id);
+//        this.data = new InstructorProfile(Instructor_id);
 //        System.out.println("FULL NAME: " + this.data.getFull_name());
 //        nameTextField.setText(data.getFull_name());
 //        usernameTextField.setText(data.getUsername());
 //    }
-    public void setSID(int student_id) {
-        this.student_id = student_id;
-        this.data = new StudentProfile(student_id);
+    public void setSID(int Instructor_id) {
+        this.Instructor_id = Instructor_id;
+        this.data = new InstructorProfile(Instructor_id);
         nameTextField.setText(data.getFull_name());
         usernameTextField.setText(data.getUsername());
     }

@@ -14,7 +14,7 @@
 
 <!--<?import app.pages.controllers.WelcomePageController?>-->
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.pages.controllers.student.StudentProfilePageController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.student.StudentProfilePageController">
    <children>
       <GridPane layoutX="112.0" layoutY="125.0" prefHeight="150.0" prefWidth="377.0">
         <columnConstraints>

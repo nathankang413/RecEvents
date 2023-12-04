@@ -1,4 +1,4 @@
-package app.pages.controllers;
+package controllers;
 import app.ScreenController;
 import app.pages.instructor.InstructorLoginPage;
 import javafx.event.ActionEvent;

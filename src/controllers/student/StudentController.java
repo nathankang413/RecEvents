@@ -1,4 +1,4 @@
-package app.pages.controllers.student;
+package controllers.student;
 
 public interface StudentController {
     public void setSID(int id);

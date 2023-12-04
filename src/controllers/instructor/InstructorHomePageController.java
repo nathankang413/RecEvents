@@ -1,6 +1,6 @@
-package app.pages.controllers.instructor;
+package controllers.instructor;
 import app.ScreenController;
-import app.pages.controllers.student.EventSearchPageController;
+import controllers.student.EventSearchPageController;
 import backend.queries.ColumnInfoTriple;
 import backend.queries.InstructorClassesView;
 import javafx.collections.ObservableList;
