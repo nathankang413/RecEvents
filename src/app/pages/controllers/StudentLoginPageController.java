@@ -1,9 +1,5 @@
 package app.pages.controllers;
-import app.RecEventsApplication;
 import app.ScreenController;
-import app.pages.instructor.InstructorLoginPage;
-import app.pages.student.NewStudentPage;
-import app.pages.student.StudentLoginPage;
 import backend.queries.StudentValidation;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,7 +8,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -36,7 +31,7 @@ public class StudentLoginPageController {
             try {
 
                 FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("/fxml/StudentHomePage.fxml"));
+                loader.setLocation(getClass().getResource("/fxml/student/StudentHomePage.fxml"));
                 Parent root = loader.load();
 
                 Scene scene = new Scene(root);
@@ -62,7 +57,7 @@ public class StudentLoginPageController {
         try {
 
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/fxml/NewStudentPage.fxml"));
+            loader.setLocation(getClass().getResource("/fxml/student/NewStudentPage.fxml"));
             Parent root = loader.load();
 
             Scene scene = new Scene(root);

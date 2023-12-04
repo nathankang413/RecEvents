@@ -1,13 +1,7 @@
 package app.pages.controllers;
-import app.RecEventsApplication;
 import app.ScreenController;
-import app.pages.instructor.InstructorLoginPage;
-import app.pages.instructor.NewInstructorPage;
-import app.pages.instructor.InstructorLoginPage;
-import app.pages.instructor.InstructorProfilePage;
 import backend.queries.ColumnInfoTriple;
 import backend.queries.InstructorClassesView;
-import backend.queries.InstructorValidation;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,7 +11,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import static javafx.collections.FXCollections.observableArrayList;
@@ -67,7 +60,7 @@ public class InstructorHomePageController {
         try {
 
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/fxml/EventSearchPage.fxml"));
+            loader.setLocation(getClass().getResource("/fxml/student/EventSearchPage.fxml"));
             Parent root = loader.load();
 
             Scene scene = new Scene(root);

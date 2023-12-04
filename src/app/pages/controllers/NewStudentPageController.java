@@ -43,7 +43,7 @@ public class NewStudentPageController {
             try {
 
                 FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("/fxml/StudentHomePage.fxml"));
+                loader.setLocation(getClass().getResource("/fxml/student/StudentHomePage.fxml"));
                 Parent root = loader.load();
 
                 Scene scene = new Scene(root);
@@ -72,7 +72,7 @@ public class NewStudentPageController {
         try {
 
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/fxml/StudentLoginPage.fxml"));
+            loader.setLocation(getClass().getResource("/fxml/student/StudentLoginPage.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
             ScreenController.addScreen("Student Login Page", scene);

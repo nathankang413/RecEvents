@@ -17,9 +17,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
 import static javafx.collections.FXCollections.observableArrayList;
 
 public class EventSearchPageController {
@@ -61,7 +58,7 @@ public class EventSearchPageController {
                     try {
 
                         FXMLLoader loader = new FXMLLoader();
-                        loader.setLocation(getClass().getResource("/fxml/StudentHomePage.fxml"));
+                        loader.setLocation(getClass().getResource("/fxml/student/StudentHomePage.fxml"));
                         Parent root = loader.load();
 
                         Scene scene = new Scene(root);
@@ -87,7 +84,7 @@ public class EventSearchPageController {
             try {
 
                 FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("/fxml/StudentHomePage.fxml"));
+                loader.setLocation(getClass().getResource("/fxml/student/StudentHomePage.fxml"));
                 Parent root = loader.load();
 
                 Scene scene = new Scene(root);
