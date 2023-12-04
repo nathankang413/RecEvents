@@ -1,4 +1,4 @@
-package app.pages.controllers;
+package app.pages.controllers.student;
 import app.ScreenController;
 import backend.queries.ColumnInfoTriple;
 import backend.queries.StudentSignupsView;

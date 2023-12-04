@@ -1,6 +1,6 @@
-package app.pages.controllers;
+package app.pages.controllers.student;
 import app.ScreenController;
-import backend.queries.InstructorValidation;
+import backend.queries.StudentValidation;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +12,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class InstructorLoginPageController {
+public class StudentLoginPageController {
     @FXML
     private Button loginButton;
     @FXML
@@ -26,21 +26,21 @@ public class InstructorLoginPageController {
 
     @FXML
     protected void login(ActionEvent e) {
-        int Instructor_id = InstructorValidation.validateLoginCreds(usernameTextField.getText(), passwordTextField.getText());
-        if (Instructor_id >= 0){
+        int student_id = StudentValidation.validateLoginCreds(usernameTextField.getText(), passwordTextField.getText());
+        if (student_id >= 0){
             try {
 
                 FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("/fxml/instructor/InstructorHomePage.fxml"));
+                loader.setLocation(getClass().getResource("/fxml/student/StudentHomePage.fxml"));
                 Parent root = loader.load();
 
                 Scene scene = new Scene(root);
-                InstructorHomePageController controller = loader.getController();
-                controller.setSID(Instructor_id);
+                StudentHomePageController controller = loader.getController();
+                controller.setSID(student_id);
 
 
-                ScreenController.addScreen("Instructor Home Page", scene);
-                ScreenController.activate("Instructor Home Page");
+                ScreenController.addScreen("Student Home Page", scene);
+                ScreenController.activate("Student Home Page");
             }
             catch(Exception exception){
                 exception.printStackTrace();
@@ -57,14 +57,14 @@ public class InstructorLoginPageController {
         try {
 
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/fxml/instructor/NewInstructorPage.fxml"));
+            loader.setLocation(getClass().getResource("/fxml/student/NewStudentPage.fxml"));
             Parent root = loader.load();
 
             Scene scene = new Scene(root);
 
 
-            ScreenController.addScreen("New Instructor Page", scene);
-            ScreenController.activate("New Instructor Page");
+            ScreenController.addScreen("New Student Page", scene);
+            ScreenController.activate("New Student Page");
         }
         catch(Exception exception){
             exception.printStackTrace();

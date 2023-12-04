@@ -1,6 +1,6 @@
-package app.pages.controllers;
+package app.pages.controllers.instructor;
 import app.ScreenController;
-import backend.queries.StudentValidation;
+import backend.queries.InstructorValidation;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,7 +13,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class NewStudentPageController {
+public class NewInstructorPageController {
     @FXML
     private TextField usernameTextField, nameTextField;
     @FXML
@@ -30,7 +30,7 @@ public class NewStudentPageController {
             errorLabel.setText("Please fill out all fields");
             return;
         }
-        if (StudentValidation.usernameExists(usernameTextField.getText())) {
+        if (InstructorValidation.usernameExists(usernameTextField.getText())) {
             errorLabel.setText("Username already exists");
             return;
         }
@@ -38,19 +38,19 @@ public class NewStudentPageController {
             errorLabel.setText("Passwords do not match");
             return;
         }
-        int student_id = StudentValidation.insertNewCreds(nameTextField.getText(), usernameTextField.getText(), passwordTextField.getText());
-        if (student_id >= 0) {
+        int Instructor_id = InstructorValidation.insertNewCreds(nameTextField.getText(), usernameTextField.getText(), passwordTextField.getText());
+        if (Instructor_id >= 0) {
             try {
 
                 FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("/fxml/student/StudentHomePage.fxml"));
+                loader.setLocation(getClass().getResource("/fxml/instructor/InstructorHomePage.fxml"));
                 Parent root = loader.load();
 
                 Scene scene = new Scene(root);
-                StudentHomePageController controller = loader.getController();
-                controller.setSID(student_id);
-                ScreenController.addScreen("Student Home Page", scene);
-                ScreenController.activate("Student Home Page");
+                InstructorHomePageController controller = loader.getController();
+                controller.setSID(Instructor_id);
+                ScreenController.addScreen("Instructor Home Page", scene);
+                ScreenController.activate("Instructor Home Page");
             }
             catch(Exception exception){
                 exception.printStackTrace();
@@ -72,11 +72,11 @@ public class NewStudentPageController {
         try {
 
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/fxml/student/StudentLoginPage.fxml"));
+            loader.setLocation(getClass().getResource("/fxml/instructor/InstructorLoginPage.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
-            ScreenController.addScreen("Student Login Page", scene);
-            ScreenController.activate("Student Login Page");
+            ScreenController.addScreen("Instructor Login Page", scene);
+            ScreenController.activate("Instructor Login Page");
         }
         catch(Exception exception){
             exception.printStackTrace();
