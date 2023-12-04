@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 public class StudentLoginPageController {
@@ -28,54 +29,21 @@ public class StudentLoginPageController {
     protected void login(ActionEvent e) {
         int student_id = StudentValidation.validateLoginCreds(usernameTextField.getText(), passwordTextField.getText());
         if (student_id >= 0){
-            try {
-
-                FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("/fxml/student/StudentHomePage.fxml"));
-                Parent root = loader.load();
-
-                Scene scene = new Scene(root);
-                StudentHomePageController controller = loader.getController();
-                controller.setSID(student_id);
-
-
-                ScreenController.addScreen("Student Home Page", scene);
-                ScreenController.activate("Student Home Page");
-            }
-            catch(Exception exception){
-                exception.printStackTrace();
-            }
+            ScreenController.changeStudentPage("Student Home Page", "/fxml/student/StudentHomePage.fxml", student_id);
         }
         else{
-//            alertText.setText("Invalid username or password");
+//            TODO: alertText.setText("Invalid username or password");
             System.out.println("todo: add failed login alert");
         }
     }
     @FXML
     protected void newUser(ActionEvent e) {
-        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        try {
-
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/fxml/student/NewStudentPage.fxml"));
-            Parent root = loader.load();
-
-            Scene scene = new Scene(root);
-
-
-            ScreenController.addScreen("New Student Page", scene);
-            ScreenController.activate("New Student Page");
-        }
-        catch(Exception exception){
-            exception.printStackTrace();
-        }
-
+        ScreenController.changePage("New Student Page", "/fxml/student/NewStudentPage.fxml");
     }
 
     @FXML
     protected void back(ActionEvent e) {
-//        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         ScreenController.activate("Welcome Page");
-
+        // TODO: SceneController.changePage("Welcome Page", "/fxml/WelcomePage.fxml");
     }
 }
