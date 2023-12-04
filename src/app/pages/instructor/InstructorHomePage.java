@@ -1,7 +1,7 @@
 package app.pages.instructor;
 
-import app.components.TitledPage;
-import app.pages.WelcomePage;
+import deprecated.components.TitledPage;
+import deprecated.WelcomePage;
 import backend.queries.ColumnInfoTriple;
 import backend.queries.InstructorClassesView;
 import javafx.collections.ObservableList;

@@ -1,7 +1,7 @@
 package app.pages.instructor;
 
-import app.components.TitledPage;
-import app.pages.WelcomePage;
+import deprecated.components.TitledPage;
+import deprecated.WelcomePage;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;

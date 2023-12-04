@@ -1,8 +1,7 @@
 package app.pages.instructor;
 
-import app.components.TitledPage;
-import app.pages.WelcomePage;
-import app.pages.student.StudentHomePage;
+import deprecated.components.TitledPage;
+import deprecated.WelcomePage;
 import backend.queries.InstructorValidation;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;

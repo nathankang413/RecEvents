@@ -1,7 +1,6 @@
-package app.pages.student;
+package deprecated.student;
 
-import app.components.TitledPage;
-import app.pages.WelcomePage;
+import deprecated.components.TitledPage;
 import backend.queries.ColumnInfoTriple;
 import backend.queries.AvailableEventView;
 import javafx.collections.ObservableList;

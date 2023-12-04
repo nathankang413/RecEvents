@@ -1,6 +1,6 @@
-package app.pages.student;
+package deprecated.student;
 
-import app.components.TitledPage;
+import deprecated.components.TitledPage;
 import backend.queries.StudentProfile;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;

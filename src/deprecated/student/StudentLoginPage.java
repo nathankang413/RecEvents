@@ -1,8 +1,7 @@
-package app.pages.student;
+package deprecated.student;
 
-import app.components.TitledPage;
-import app.pages.WelcomePage;
-import backend.queries.StudentSignupsView;
+import deprecated.components.TitledPage;
+import deprecated.WelcomePage;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;

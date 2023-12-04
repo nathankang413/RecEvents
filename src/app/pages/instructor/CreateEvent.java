@@ -1,21 +1,15 @@
 package app.pages.instructor;
 
-import app.components.TitledPage;
-import app.pages.student.StudentHomePage;
-import backend.queries.AddClass;
+import deprecated.components.TitledPage;
 import backend.queries.AddEvent;
 import backend.queries.ClassInformation;
-import backend.queries.StudentProfile;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-import java.sql.ResultSet;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 public class CreateEvent extends TitledPage {
     public CreateEvent(Stage primaryStage, int instructorid) {

@@ -1,4 +1,4 @@
-package app.components;
+package deprecated.components;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;

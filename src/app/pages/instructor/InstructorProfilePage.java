@@ -1,7 +1,7 @@
 package app.pages.instructor;
 
-import app.components.TitledPage;
-import app.pages.student.StudentHomePage;
+import deprecated.components.TitledPage;
+import deprecated.student.StudentHomePage;
 import backend.queries.*;
 import javafx.collections.ObservableList;
 import javafx.scene.control.*;

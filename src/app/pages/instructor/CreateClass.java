@@ -1,13 +1,9 @@
 package app.pages.instructor;
 
-import app.components.TitledPage;
-import app.pages.student.StudentHomePage;
+import deprecated.components.TitledPage;
 import backend.queries.AddClass;
-import backend.queries.StudentProfile;
-import backend.queries.StudentSignupsView;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
