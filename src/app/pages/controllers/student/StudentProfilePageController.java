@@ -10,7 +10,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class StudentProfilePageController {
+public class StudentProfilePageController implements StudentController {
     @FXML
     private Button backButton, nameButton, usernameButton, passwordButton;
     @FXML

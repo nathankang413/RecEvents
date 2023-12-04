@@ -16,7 +16,7 @@ import javafx.stage.Stage;
 import static javafx.collections.FXCollections.observableArrayList;
 
 import javafx.scene.control.Button;
-public class StudentHomePageController {
+public class StudentHomePageController implements StudentController {
     @FXML
     private Button logOutButton;
     @FXML

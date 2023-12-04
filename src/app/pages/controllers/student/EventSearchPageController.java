@@ -19,7 +19,7 @@ import javafx.stage.Stage;
 
 import static javafx.collections.FXCollections.observableArrayList;
 
-public class EventSearchPageController {
+public class EventSearchPageController implements StudentController {
     @FXML
     private Button backButton;
     @FXML
