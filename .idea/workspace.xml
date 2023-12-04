@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27f799d2-1e86-4931-86db-c3c496e19e9d" name="Changes" comment="gitignore">
-      <change afterPath="$PROJECT_DIR$/src/app/pages/controllers/NewStudentPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/fxml/NewStudentPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fxml/NewStudentPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/fxml/StudentHomePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fxml/StudentHomePage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/fxml/StudentProfilePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fxml/StudentProfilePage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/controllers/NewStudentPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/controllers/NewStudentPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/controllers/StudentHomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/controllers/StudentHomePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/controllers/StudentProfilePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/controllers/StudentProfilePageController.java" afterDir="false" />
-    </list>
+    <list default="true" id="27f799d2-1e86-4931-86db-c3c496e19e9d" name="Changes" comment="gitignore" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,26 +29,30 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
   <component name="ProjectId" id="2XoOg3Ntp1LBbqAEmt7iuC6fF0B" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/gabrielhervias/FallQ2023/CSC365/Project/RecEvents/resources/fxml&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "true",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "/Users/loganbarker/Desktop/CS/365/DBProject/RecEvents",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/fxml" />
