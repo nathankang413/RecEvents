@@ -7,7 +7,7 @@ import javafx.fxml.FXML;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
-public class CreateClassPageController implements UserPageController {
+public class NewClassPageController implements UserPageController {
 
     @FXML
     private TextField classNameField, priceField;

@@ -16,7 +16,7 @@
 
 <!--<?import app.pages.WelcomePageController?>-->
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.instructor.CreateClassPageController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.instructor.NewClassPageController">
     <children>
         <ImageView fitHeight="401.0" fitWidth="620.0" pickOnBounds="true" preserveRatio="true">
             <image>

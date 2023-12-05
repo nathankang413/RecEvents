@@ -20,7 +20,7 @@ public class InstructorHomePageController implements UserPageController {
     @FXML
     private Button profileButton;
     @FXML
-    private Button eventSearchButton;
+    private Button newEventButton;
     @FXML
     TableView<InstructorClassesView> table;
     ObservableList<InstructorClassesView> list;
@@ -36,9 +36,8 @@ public class InstructorHomePageController implements UserPageController {
         ScreenController.changeUserPage("Instructor Profile Page", "/fxml/instructor/InstructorProfilePage.fxml", instructor_id);
     }
     @FXML
-    protected void eventSearch(ActionEvent e) {
-        // TODO: switch to even creation page
-
+    protected void newEvent(ActionEvent e) {
+        ScreenController.changeUserPage("Event Search Page", "/fxml/instructor/NewEventPage.fxml", instructor_id);
     }
 
     @FXML

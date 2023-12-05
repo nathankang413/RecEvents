@@ -40,7 +40,7 @@
          <children>
               <Button fx:id="logOutButton" mnemonicParsing="false" onAction="#logout" text="Log Out" GridPane.rowIndex="3" />
               <Button fx:id="profileButton" mnemonicParsing="false" onAction="#profileButtonClick" text="Profile" GridPane.rowIndex="2" />
-              <Button fx:id="eventSearchButton" mnemonicParsing="false" onAction="#eventSearch" text="Event Search" />
+              <Button fx:id="newEventButton" mnemonicParsing="false" onAction="#newEvent" text="New Event" />
          </children>
       </GridPane>
     </children>
