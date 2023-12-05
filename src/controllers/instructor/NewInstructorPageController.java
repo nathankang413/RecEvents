@@ -48,7 +48,7 @@ public class NewInstructorPageController {
 
                 Scene scene = new Scene(root);
                 InstructorHomePageController controller = loader.getController();
-                controller.setSID(Instructor_id);
+                controller.setIID(Instructor_id);
                 ScreenController.addScreen("Instructor Home Page", scene);
                 ScreenController.activate("Instructor Home Page");
             }

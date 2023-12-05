@@ -19,7 +19,18 @@ public class WelcomePageController {
     @FXML
     protected void instructorButtonClick(ActionEvent e) {
         Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        stage.setScene((new InstructorLoginPage(stage)));
+        try {
+
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/fxml/instructor/InstructorLoginPage.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            ScreenController.addScreen("Instructor Login Page", scene);
+            ScreenController.activate("Instructor Login Page");
+        }
+        catch(Exception exception){
+            exception.printStackTrace();
+        }
     }
 
     @FXML

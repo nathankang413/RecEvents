@@ -90,7 +90,7 @@ public class InstructorHomePageController {
     }
 
 
-    public void setSID(int Instructor_id) {
+    public void setIID(int Instructor_id) {
         this.Instructor_id = Instructor_id;
         InstructorClassesView.fillList(list, Instructor_id);
     }

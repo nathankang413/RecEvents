@@ -29,14 +29,13 @@ public class InstructorLoginPageController {
         int Instructor_id = InstructorValidation.validateLoginCreds(usernameTextField.getText(), passwordTextField.getText());
         if (Instructor_id >= 0){
             try {
-
                 FXMLLoader loader = new FXMLLoader();
                 loader.setLocation(getClass().getResource("/fxml/instructor/InstructorHomePage.fxml"));
                 Parent root = loader.load();
 
                 Scene scene = new Scene(root);
                 InstructorHomePageController controller = loader.getController();
-                controller.setSID(Instructor_id);
+                controller.setIID(Instructor_id);
 
 
                 ScreenController.addScreen("Instructor Home Page", scene);
