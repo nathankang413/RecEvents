@@ -1,6 +1,6 @@
 package app;
 
-import backend.SqlConnector;
+import database.SqlConnector;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

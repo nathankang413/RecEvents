@@ -1,7 +1,6 @@
 package app;
 
-import controllers.student.StudentController;
-import controllers.student.StudentHomePageController;
+import controllers.UserPageController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -41,7 +40,7 @@ public class ScreenController {
         ScreenController.activate(name);
     }
 
-    public static void changeStudentPage(String name, String fxml, int student_id) {
+    public static void changeUserPage(String name, String fxml, int student_id) {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(ScreenController.class.getResource(fxml));
         Parent root;
@@ -53,8 +52,8 @@ public class ScreenController {
             return;
         }
         Scene scene = new Scene(root);
-        StudentController controller = loader.getController();
-        controller.setSID(student_id);
+        UserPageController controller = loader.getController();
+        controller.setUID(student_id);
 
         ScreenController.addScreen(name, scene);
         ScreenController.activate(name);

@@ -1,10 +1,6 @@
 package backend.queries;
 
-import backend.SqlConnector;
-import javafx.collections.ObservableList;
-
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import database.SqlConnector;
 
 public class AddEvent {
 

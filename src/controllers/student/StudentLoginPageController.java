@@ -23,7 +23,7 @@ public class StudentLoginPageController {
     protected void login(ActionEvent e) {
         int student_id = StudentValidation.validateLoginCreds(usernameTextField.getText(), passwordTextField.getText());
         if (student_id >= 0){
-            ScreenController.changeStudentPage("Student Home Page", "/fxml/student/StudentHomePage.fxml", student_id);
+            ScreenController.changeUserPage("Student Home Page", "/fxml/student/StudentHomePage.fxml", student_id);
         }
         else{
 //            TODO: alertText.setText("Invalid username or password");

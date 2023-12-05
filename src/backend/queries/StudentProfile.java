@@ -1,6 +1,6 @@
 package backend.queries;
 
-import backend.SqlConnector;
+import database.SqlConnector;
 import database.StudentValidation;
 
 import java.sql.ResultSet;

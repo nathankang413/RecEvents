@@ -1,6 +1,7 @@
 package controllers.instructor;
 import app.ScreenController;
 import backend.queries.InstructorProfile;
+import controllers.UserPageController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -10,7 +11,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class InstructorProfilePageController {
+public class InstructorProfilePageController implements UserPageController {
     @FXML
     private Button backButton, nameButton, usernameButton, passwordButton;
     @FXML
@@ -21,7 +22,7 @@ public class InstructorProfilePageController {
     PasswordField passwordTextField, confirmPasswordTextField;
     @FXML
     Label errorLabel;
-    int Instructor_id;
+    int instructor_id;
 
     @FXML
     protected void back(ActionEvent e) {
@@ -63,10 +64,11 @@ public class InstructorProfilePageController {
 //        nameTextField.setText(data.getFull_name());
 //        usernameTextField.setText(data.getUsername());
 //    }
-    public void setSID(int Instructor_id) {
-        this.Instructor_id = Instructor_id;
+    public void setUID(int Instructor_id) {
+        this.instructor_id = Instructor_id;
         this.data = new InstructorProfile(Instructor_id);
         nameTextField.setText(data.getFull_name());
         usernameTextField.setText(data.getUsername());
     }
 }
+

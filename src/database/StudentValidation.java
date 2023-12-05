@@ -1,7 +1,5 @@
 package database;
 
-import backend.SqlConnector;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 

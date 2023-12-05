@@ -2,13 +2,11 @@ package controllers.student;
 import app.ScreenController;
 import backend.queries.AvailableEventView;
 import backend.queries.ColumnInfoTriple;
+import controllers.UserPageController;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -19,7 +17,7 @@ import javafx.stage.Stage;
 
 import static javafx.collections.FXCollections.observableArrayList;
 
-public class EventSearchPageController implements StudentController {
+public class EventSearchPageController implements UserPageController {
     @FXML
     private Button backButton;
     @FXML
@@ -54,7 +52,7 @@ public class EventSearchPageController implements StudentController {
             if (errorMessage != null) {
                 errorLabel.setText(errorMessage);
             } else if (student_id >= 0) {
-                ScreenController.changeStudentPage("Student Home Page", "/fxml/student/StudentHomePage.fxml", student_id);
+                ScreenController.changeUserPage("Student Home Page", "/fxml/student/StudentHomePage.fxml", student_id);
             }
         }
 
@@ -64,14 +62,14 @@ public class EventSearchPageController implements StudentController {
     protected void back(ActionEvent e) {
         Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         if (student_id >= 0){
-            ScreenController.changeStudentPage("Student Home Page", "/fxml/student/StudentHomePage.fxml", student_id);
+            ScreenController.changeUserPage("Student Home Page", "/fxml/student/StudentHomePage.fxml", student_id);
         }
         else{
             System.out.println("student_id lost in EventSearchPageController");
             ScreenController.activate("Welcome Page");
         }
     }
-    public void setSID(int student_id) {
+    public void setUID(int student_id) {
         this.student_id = student_id;
     }
 

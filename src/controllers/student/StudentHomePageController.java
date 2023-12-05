@@ -2,13 +2,11 @@ package controllers.student;
 import app.ScreenController;
 import backend.queries.ColumnInfoTriple;
 import backend.queries.StudentSignupsView;
+import controllers.UserPageController;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
@@ -16,7 +14,7 @@ import javafx.stage.Stage;
 import static javafx.collections.FXCollections.observableArrayList;
 
 import javafx.scene.control.Button;
-public class StudentHomePageController implements StudentController {
+public class StudentHomePageController implements UserPageController {
     @FXML
     private Button logOutButton;
     @FXML
@@ -35,12 +33,12 @@ public class StudentHomePageController implements StudentController {
     }
     @FXML
     protected void profileButtonClick(ActionEvent e) {
-        ScreenController.changeStudentPage("Student Profile Page", "/fxml/student/StudentProfilePage.fxml", student_id);
+        ScreenController.changeUserPage("Student Profile Page", "/fxml/student/StudentProfilePage.fxml", student_id);
     }
     @FXML
     protected void eventSearch(ActionEvent e) {
         Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        ScreenController.changeStudentPage("Event Search Page", "/fxml/student/EventSearchPage.fxml", student_id);
+        ScreenController.changeUserPage("Event Search Page", "/fxml/student/EventSearchPage.fxml", student_id);
     }
     @FXML
     public void initialize(){
@@ -54,7 +52,7 @@ public class StudentHomePageController implements StudentController {
         }
     }
 
-    public void setSID(int student_id) {
+    public void setUID(int student_id) {
         this.student_id = student_id;
         StudentSignupsView.fillList(list, student_id);
     }

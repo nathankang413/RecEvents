@@ -1,6 +1,7 @@
 package controllers.student;
 import app.ScreenController;
 import backend.queries.StudentProfile;
+import controllers.UserPageController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -10,7 +11,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class StudentProfilePageController implements StudentController {
+public class StudentProfilePageController implements UserPageController {
     @FXML
     private Button backButton, nameButton, usernameButton, passwordButton;
     @FXML
@@ -56,7 +57,7 @@ public class StudentProfilePageController implements StudentController {
         }
     }
 
-    public void setSID(int student_id) {
+    public void setUID(int student_id) {
         this.student_id = student_id;
         this.data = new StudentProfile(student_id);
         nameTextField.setText(data.getFull_name());

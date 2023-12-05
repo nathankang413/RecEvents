@@ -1,4 +1,4 @@
-package backend;
+package database;
 
 public class Constants {
     // SQL connector info

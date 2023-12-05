@@ -1,6 +1,6 @@
 package backend.queries;
 
-import backend.SqlConnector;
+import database.SqlConnector;
 import javafx.collections.ObservableList;
 
 import java.sql.ResultSet;

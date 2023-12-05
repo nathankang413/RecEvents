@@ -37,7 +37,7 @@ public class NewStudentPageController {
 
         int student_id = StudentValidation.insertNewCreds(nameTextField.getText(), usernameTextField.getText(), passwordTextField.getText());
         if (student_id >= 0) {
-            ScreenController.changeStudentPage("Student Home Page", "/fxml/student/StudentHomePage.fxml", student_id);
+            ScreenController.changeUserPage("Student Home Page", "/fxml/student/StudentHomePage.fxml", student_id);
         } else {
             errorLabel.setText("Error creating account");
         }

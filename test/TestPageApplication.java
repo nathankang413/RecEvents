@@ -1,6 +1,6 @@
 import deprecated.instructor.CreateEvent;
 import app.pages.student.*;
-import backend.SqlConnector;
+import database.SqlConnector;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;

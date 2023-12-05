@@ -1,11 +1,10 @@
 package backend.queries;
 
-import backend.SqlConnector;
+import database.SqlConnector;
 import javafx.collections.ObservableList;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 

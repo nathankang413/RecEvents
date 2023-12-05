@@ -26,30 +26,16 @@ public class InstructorLoginPageController {
 
     @FXML
     protected void login(ActionEvent e) {
-        int Instructor_id = InstructorValidation.validateLoginCreds(usernameTextField.getText(), passwordTextField.getText());
-        if (Instructor_id >= 0){
-            try {
-                FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("/fxml/instructor/InstructorHomePage.fxml"));
-                Parent root = loader.load();
-
-                Scene scene = new Scene(root);
-                InstructorHomePageController controller = loader.getController();
-                controller.setIID(Instructor_id);
-
-
-                ScreenController.addScreen("Instructor Home Page", scene);
-                ScreenController.activate("Instructor Home Page");
-            }
-            catch(Exception exception){
-                exception.printStackTrace();
-            }
+        int instructor_id = InstructorValidation.validateLoginCreds(usernameTextField.getText(), passwordTextField.getText());
+        if (instructor_id >= 0) {
+            ScreenController.changeUserPage("Instructor Home Page", "/fxml/instructor/InstructorHomePage.fxml", instructor_id);
         }
-        else{
-//            alertText.setText("Invalid username or password");
+        else {
+//            // TODO: alertText.setText("Invalid username or password");
             System.out.println("todo: add failed login alert");
         }
     }
+
     @FXML
     protected void newUser(ActionEvent e) {
         Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();

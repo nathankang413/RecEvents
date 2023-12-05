@@ -11,6 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 public class NewInstructorPageController {
@@ -38,23 +39,10 @@ public class NewInstructorPageController {
             errorLabel.setText("Passwords do not match");
             return;
         }
-        int Instructor_id = InstructorValidation.insertNewCreds(nameTextField.getText(), usernameTextField.getText(), passwordTextField.getText());
-        if (Instructor_id >= 0) {
-            try {
-
-                FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("/fxml/instructor/InstructorHomePage.fxml"));
-                Parent root = loader.load();
-
-                Scene scene = new Scene(root);
-                InstructorHomePageController controller = loader.getController();
-                controller.setIID(Instructor_id);
-                ScreenController.addScreen("Instructor Home Page", scene);
-                ScreenController.activate("Instructor Home Page");
-            }
-            catch(Exception exception){
-                exception.printStackTrace();
-            }
+        int instructor_id = InstructorValidation.insertNewCreds(nameTextField.getText(), usernameTextField.getText(), passwordTextField.getText());
+        if (instructor_id >= 0) {
+            // TODO
+            ScreenController.changeUserPage("Instructor Home Page", "/fxml/instructor/InstructorHomePage.fxml", instructor_id);
         } else {
             errorLabel.setText("Error creating account");
         }
@@ -62,24 +50,11 @@ public class NewInstructorPageController {
 
     @FXML
     protected  void back(ActionEvent e){
-        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         ScreenController.activate("Welcome Page");
     }
 
     @FXML
     protected void existingUser(ActionEvent e){
-        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        try {
-
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/fxml/instructor/InstructorLoginPage.fxml"));
-            Parent root = loader.load();
-            Scene scene = new Scene(root);
-            ScreenController.addScreen("Instructor Login Page", scene);
-            ScreenController.activate("Instructor Login Page");
-        }
-        catch(Exception exception){
-            exception.printStackTrace();
-        }
+        ScreenController.changePage("Instructor Login Page", "/fxml/instructor/InstructorLoginPage.fxml");
     }
 }
