@@ -7,6 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -14,21 +15,22 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.student.EventSearchPageController">
    <children>
-      <VBox layoutX="34.0" layoutY="28.0" prefHeight="345.0" prefWidth="533.0">
+      <Rectangle fill="#154734" height="400.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+      <VBox layoutX="34.0" layoutY="28.0" prefHeight="345.0" prefWidth="533.0" spacing="10.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Events">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Event Search">
                <VBox.margin>
                   <Insets bottom="10.0" />
                </VBox.margin>
                <font>
-                  <Font size="16.0" />
+                  <Font name="System Bold" size="28.0" />
                </font>
             </Text>
             <TableView fx:id="table" onMouseClicked="#mouseClicked" prefHeight="280.0" prefWidth="530.0" />
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <HBox prefHeight="48.0" prefWidth="533.0" spacing="10.0">
                <children>
                   <Button fx:id="backButton" mnemonicParsing="false" onAction="#back" text="Back" />
-                  <Label fx:id="errorLabel" />
+                  <Label fx:id="errorLabel" textFill="#ff4343" />
                </children>
             </HBox>
          </children>
