@@ -33,8 +33,7 @@ public class InstructorHomePageController implements UserPageController {
     }
     @FXML
     protected void profileButtonClick(ActionEvent e) {
-        // TODO
-//        ScreenController.changeUserPage("Instructor Profile Page", "/fxml/instructor/InstructorProfilePage.fxml", instructor_id);
+        ScreenController.changeUserPage("Instructor Profile Page", "/fxml/instructor/InstructorProfilePage.fxml", instructor_id);
     }
     @FXML
     protected void eventSearch(ActionEvent e) {
