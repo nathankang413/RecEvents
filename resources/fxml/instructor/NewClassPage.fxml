@@ -44,9 +44,9 @@
                 <Label prefHeight="17.0" prefWidth="98.0" text="Class Name:" textFill="WHITE" GridPane.rowIndex="1" />
                 <Label prefHeight="17.0" prefWidth="43.0" text="Price: " textFill="WHITE" GridPane.rowIndex="2" />
                 <Button fx:id="backButton" mnemonicParsing="false" onAction="#back" text="Back" GridPane.rowIndex="3" />
-                <Button fx:id="loginButton" mnemonicParsing="false" onAction="#login" text="Add Class" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                <TextField fx:id="usernameTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                <PasswordField fx:id="passwordTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Button fx:id="addClassButton" mnemonicParsing="false" onAction="#createClass" text="Add Class" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <TextField fx:id="classNameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <PasswordField fx:id="priceField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
       </GridPane>
     </children>

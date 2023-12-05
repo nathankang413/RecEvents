@@ -23,7 +23,7 @@ public class NewEventPageController implements UserPageController {
 
     @FXML
     protected void newClass(ActionEvent e) {
-        // TODO: change to new class page
+        ScreenController.changeUserPage("New Class", "/fxml/instructor/NewClassPage.fxml", instructor_id);
     }
 
     @FXML

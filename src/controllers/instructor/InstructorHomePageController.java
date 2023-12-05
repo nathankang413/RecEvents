@@ -37,7 +37,7 @@ public class InstructorHomePageController implements UserPageController {
     }
     @FXML
     protected void newEvent(ActionEvent e) {
-        ScreenController.changeUserPage("Event Search Page", "/fxml/instructor/NewEventPage.fxml", instructor_id);
+        ScreenController.changeUserPage("New Event Page", "/fxml/instructor/NewEventPage.fxml", instructor_id);
     }
 
     @FXML

@@ -2,10 +2,10 @@ package controllers.instructor;
 
 import app.ScreenController;
 import controllers.UserPageController;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-
-import java.awt.*;
-import java.awt.event.ActionEvent;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 
 public class NewClassPageController implements UserPageController {
 
@@ -17,12 +17,18 @@ public class NewClassPageController implements UserPageController {
 
     private int instructor_id;
 
-    public void setUID(int instructor_id) {
-        this.instructor_id = instructor_id;
+    @FXML
+    protected void createClass(ActionEvent e) {
+        // TODO
     }
 
+    @FXML
     protected void back(ActionEvent e) {
-        ScreenController.changeUserPage("Instructor Home Page", "/fxml/instructor/InstructorHomePage.fxml", instructor_id);
+        ScreenController.changeUserPage("New Event Page", "/fxml/instructor/NewEventPage.fxml", instructor_id);
+    }
+
+    public void setUID(int instructor_id) {
+        this.instructor_id = instructor_id;
     }
 
 
