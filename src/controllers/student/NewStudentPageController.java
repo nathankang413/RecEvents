@@ -1,6 +1,6 @@
 package controllers.student;
 import app.ScreenController;
-import backend.queries.StudentValidation;
+import database.StudentValidation;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

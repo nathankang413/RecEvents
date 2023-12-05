@@ -1,4 +1,4 @@
-package backend.queries;
+package database;
 
 import backend.SqlConnector;
 
@@ -14,11 +14,12 @@ public class StudentValidation {
      * @return The id of the user or -1 if not valid
      */
     public static int validateLoginCreds(String username, String password) {
-        ResultSet rs = SqlConnector.runQuery(String.format("SELECT id, pw_hash FROM Students WHERE username = '%s'", username));
+        String query = "SELECT id, pw_hash FROM Students WHERE username = '%s'";
+        ResultSet rs = SqlConnector.runQuery(String.format(query, username));
+
         if (rs == null) return -1;
 
-        int student_id;
-        int pwHash;
+        int student_id, pwHash;
         try {
             if (!rs.next()) return -1;
             student_id = rs.getInt("id");
@@ -35,8 +36,11 @@ public class StudentValidation {
     }
 
     public static boolean usernameExists(String username) {
-        ResultSet rs = SqlConnector.runQuery(String.format("SELECT * FROM Students WHERE username = '%s'", username));
+        String query = "SELECT * FROM Students WHERE username = '%s'";
+        ResultSet rs = SqlConnector.runQuery(String.format(query, username));
+
         if (rs == null) return false;
+
         try {
             return rs.next();
         } catch (SQLException e) {
@@ -46,11 +50,14 @@ public class StudentValidation {
     }
 
     public static int insertNewCreds(String fullname, String username, String password) {
-        if (! SqlConnector.runUpdate(String.format("INSERT INTO Students (full_name, username, pw_hash) VALUES ('%s', '%s', '%d')", fullname, username, password.hashCode()))) {
+        String insert_query = "INSERT INTO Students (full_name, username, pw_hash) VALUES ('%s', '%s', '%d')";
+        String get_student_id = "SELECT id FROM Students WHERE username = '%s'";
+
+        if (!SqlConnector.runUpdate(String.format(insert_query, fullname, username, password.hashCode()))) {
             return -1;
         }
 
-        ResultSet rs = SqlConnector.runQuery(String.format("SELECT id FROM Students WHERE username = '%s'", username));
+        ResultSet rs = SqlConnector.runQuery(String.format(get_student_id, username));
         if (rs == null) return -1;
         try {
             if (!rs.next()) return -1;
@@ -60,6 +67,4 @@ public class StudentValidation {
             return -1;
         }
     }
-
-
 }

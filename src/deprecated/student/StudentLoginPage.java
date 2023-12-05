@@ -10,7 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-import backend.queries.StudentValidation;
+import database.StudentValidation;
 
 public class StudentLoginPage extends TitledPage {
 
