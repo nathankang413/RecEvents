@@ -35,46 +35,12 @@ public class StudentHomePageController implements StudentController {
     }
     @FXML
     protected void profileButtonClick(ActionEvent e) {
-        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        try {
-
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/fxml/student/StudentProfilePage.fxml"));
-            Parent root = loader.load();
-
-            Scene scene = new Scene(root);
-            StudentProfilePageController controller = loader.getController();
-            controller.setSID(student_id);
-
-
-            ScreenController.addScreen("Student Profile Page", scene);
-            ScreenController.activate("Student Profile Page");
-        }
-        catch(Exception exception){
-            exception.printStackTrace();
-        }
+        ScreenController.changeStudentPage("Student Profile Page", "/fxml/student/StudentProfilePage.fxml", student_id);
     }
     @FXML
     protected void eventSearch(ActionEvent e) {
         Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        try {
-
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/fxml/student/EventSearchPage.fxml"));
-            Parent root = loader.load();
-
-            Scene scene = new Scene(root);
-            EventSearchPageController controller = loader.getController();
-            controller.setSID(student_id);
-
-
-            ScreenController.addScreen("Event Search Page", scene);
-            ScreenController.activate("Event Search Page");
-        }
-        catch(Exception exception){
-            exception.printStackTrace();
-        }
-
+        ScreenController.changeStudentPage("Event Search Page", "/fxml/student/EventSearchPage.fxml", student_id);
     }
     @FXML
     public void initialize(){
@@ -87,7 +53,6 @@ public class StudentHomePageController implements StudentController {
             table.getColumns().add(col);
         }
     }
-
 
     public void setSID(int student_id) {
         this.student_id = student_id;

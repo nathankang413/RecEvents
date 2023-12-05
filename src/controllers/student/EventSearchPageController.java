@@ -53,25 +53,8 @@ public class EventSearchPageController implements StudentController {
             String errorMessage = AvailableEventView.addSignup(student_id, Integer.parseInt(event.getEventId()));
             if (errorMessage != null) {
                 errorLabel.setText(errorMessage);
-            } else {
-                if (student_id >= 0) {
-                    try {
-
-                        FXMLLoader loader = new FXMLLoader();
-                        loader.setLocation(getClass().getResource("/fxml/student/StudentHomePage.fxml"));
-                        Parent root = loader.load();
-
-                        Scene scene = new Scene(root);
-                        StudentHomePageController controller = loader.getController();
-                        controller.setSID(student_id);
-
-
-                        ScreenController.addScreen("Student Home Page", scene);
-                        ScreenController.activate("Student Home Page");
-                    } catch (Exception exception) {
-                        exception.printStackTrace();
-                    }
-                }
+            } else if (student_id >= 0) {
+                ScreenController.changeStudentPage("Student Home Page", "/fxml/student/StudentHomePage.fxml", student_id);
             }
         }
 
@@ -81,27 +64,11 @@ public class EventSearchPageController implements StudentController {
     protected void back(ActionEvent e) {
         Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         if (student_id >= 0){
-            try {
-
-                FXMLLoader loader = new FXMLLoader();
-                loader.setLocation(getClass().getResource("/fxml/student/StudentHomePage.fxml"));
-                Parent root = loader.load();
-
-                Scene scene = new Scene(root);
-                StudentHomePageController controller = loader.getController();
-                controller.setSID(student_id);
-
-
-                ScreenController.addScreen("Student Home Page", scene);
-                ScreenController.activate("Student Home Page");
-            }
-            catch(Exception exception){
-                exception.printStackTrace();
-            }
+            ScreenController.changeStudentPage("Student Home Page", "/fxml/student/StudentHomePage.fxml", student_id);
         }
         else{
-//            alertText.setText("Invalid username or password");
-            System.out.println("todo: add failed login alert");
+            System.out.println("student_id lost in EventSearchPageController");
+            ScreenController.activate("Welcome Page");
         }
     }
     public void setSID(int student_id) {

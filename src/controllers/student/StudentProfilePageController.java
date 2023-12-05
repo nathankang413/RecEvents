@@ -56,13 +56,6 @@ public class StudentProfilePageController implements StudentController {
         }
     }
 
-    @FXML
-//    public void initialize() {
-//        this.data = new StudentProfile(student_id);
-//        System.out.println("FULL NAME: " + this.data.getFull_name());
-//        nameTextField.setText(data.getFull_name());
-//        usernameTextField.setText(data.getUsername());
-//    }
     public void setSID(int student_id) {
         this.student_id = student_id;
         this.data = new StudentProfile(student_id);
