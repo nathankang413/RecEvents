@@ -43,12 +43,13 @@
                   </font>
             </Text>
               <Button fx:id="loginButton" mnemonicParsing="false" onAction="#login" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-              <Button fx:id="backButton" mnemonicParsing="false" onAction="#back" text="Back" GridPane.rowIndex="3" />
+              <Button fx:id="backButton" mnemonicParsing="false" onAction="#back" text="Back" GridPane.rowIndex="4" />
               <Button fx:id="newUserButton" mnemonicParsing="false" onAction="#newUser" text="New User" GridPane.columnIndex="1" GridPane.rowIndex="4" />
               <Label prefHeight="0.0" prefWidth="60.0" text="Username:" textFill="WHITE" GridPane.rowIndex="1" />
               <Label text="Password:" textFill="WHITE" GridPane.rowIndex="2" />
               <TextField fx:id="usernameTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
               <PasswordField fx:id="passwordTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="alertLabel" textFill="RED" GridPane.rowIndex="3" />
          </children>
       </GridPane>
     </children>

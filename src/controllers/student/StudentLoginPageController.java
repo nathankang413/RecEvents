@@ -4,16 +4,15 @@ import database.StudentValidation;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 public class StudentLoginPageController {
     @FXML
-    private Button loginButton;
+    private Button loginButton, backButton, newUserButton;
     @FXML
-    private Button backButton;
-    @FXML
-    private Button newUserButton;
+    Label alertLabel;
     @FXML
     TextField usernameTextField;
     @FXML
@@ -26,8 +25,7 @@ public class StudentLoginPageController {
             ScreenController.changeUserPage("Student Home Page", "/fxml/student/StudentHomePage.fxml", student_id);
         }
         else{
-//            TODO: alertText.setText("Invalid username or password");
-            System.out.println("todo: add failed login alert");
+            alertLabel.setText("Invalid login");
         }
     }
     @FXML

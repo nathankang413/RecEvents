@@ -61,7 +61,7 @@
                 </GridPane>
                 <HBox alignment="BOTTOM_RIGHT" prefHeight="17.0" prefWidth="127.0">
                     <children>
-                        <Label fx:id="errorLabel" alignment="CENTER" contentDisplay="CENTER" textAlignment="CENTER" />
+                        <Label fx:id="errorLabel" textFill="RED" alignment="CENTER" contentDisplay="CENTER" textAlignment="CENTER" />
                     </children>
                 </HBox>
                 <GridPane prefHeight="118.0" prefWidth="275.0">

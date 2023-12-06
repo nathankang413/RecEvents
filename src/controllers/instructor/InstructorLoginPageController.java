@@ -8,17 +8,16 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class InstructorLoginPageController {
     @FXML
-    private Button loginButton;
+    private Button loginButton, backButton, newUserButton;
     @FXML
-    private Button backButton;
-    @FXML
-    private Button newUserButton;
+    private Label alertLabel;
     @FXML
     TextField usernameTextField;
     @FXML
@@ -31,8 +30,7 @@ public class InstructorLoginPageController {
             ScreenController.changeUserPage("Instructor Home Page", "/fxml/instructor/InstructorHomePage.fxml", instructor_id);
         }
         else {
-//            // TODO: alertText.setText("Invalid username or password");
-            System.out.println("todo: add failed login alert");
+            alertLabel.setText("Invalid login");
         }
     }
 
