@@ -2,18 +2,21 @@
 -- https://www.asi.calpoly.edu/get-active/fitness/courses/
 
 INSERT INTO Instructors (full_name, username, pw_hash) VALUES
-    ('Doriana Pirolo', 'dpirolo', 0),
-    ('Cindy Burnside', 'cburnside', 0),
-    ('Lea Brandy-Janowicz', 'lbrandy', 0),
-    ('Stephanie Albright', 'salbright', 0),
-    ('Karen Ashley', 'kashley', 0),
-    ('Leah Sarles', 'lsarles', 0),
-    ('Christiane Schroeter', 'cschroeter', 0),
-    ('Liz Crosby', 'lcrosby', 0)
+    ('Doriana Pirolo', 'dpirolo', 96354),
+    ('Cindy Burnside', 'cburnside', 96354),
+    ('Lea Brandy-Janowicz', 'lbrandy', 96354),
+    ('Stephanie Albright', 'salbright', 96354),
+    ('Karen Ashley', 'kashley', 96354),
+    ('Leah Sarles', 'lsarles', 96354),
+    ('Christiane Schroeter', 'cschroeter', 96354),
+    ('Liz Crosby', 'lcrosby', 96354)
 ;
 
 INSERT INTO Students (full_name, username, pw_hash) VALUES
-
+    ('Nathan Kang', 'nkang', 96354),
+    ('Darren Hartono', 'dhartono', 96354),
+    ('Logan Barker', 'lbarker', 96354),
+    ('Gabe Hervias', 'ghervias', 96354)
 ;
 
 INSERT INTO Classes (name, instructor_id, price) VALUES
