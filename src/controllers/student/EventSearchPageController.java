@@ -45,9 +45,7 @@ public class EventSearchPageController implements UserPageController {
     @FXML
     protected void mouseClicked(MouseEvent e){
         if (e.getClickCount() == 2) {
-            Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
             AvailableEventView event = table.getSelectionModel().getSelectedItem();
-            System.out.println("Clicked on " + event.getEventId() + " " + event.getClassName());
             String errorMessage = AvailableEventView.addSignup(student_id, Integer.parseInt(event.getEventId()));
             if (errorMessage != null) {
                 errorLabel.setText(errorMessage);

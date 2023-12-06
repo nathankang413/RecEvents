@@ -3,7 +3,7 @@ package deprecated.instructor;
 import deprecated.components.TitledPage;
 import deprecated.WelcomePage;
 import backend.queries.ColumnInfoTriple;
-import backend.queries.InstructorClassesView;
+import database.InstructorEventsView;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
@@ -42,26 +42,26 @@ public class InstructorHomePage extends TitledPage {
         });
 
         // Signups table
-        TableView<InstructorClassesView> table = new TableView<>();
-        ObservableList<InstructorClassesView> list = observableArrayList();
+        TableView<InstructorEventsView> table = new TableView<>();
+        ObservableList<InstructorEventsView> list = observableArrayList();
         table.setItems(list);
         table.setPrefWidth(WINDOW_WIDTH);
         grid.add(table, 0, 3, 3, 1);
 
         // Create columns and populate table
-        for (ColumnInfoTriple info : InstructorClassesView.getColumnInfo()) {
-            TableColumn<InstructorClassesView, String> col = new TableColumn<>(info.displayName);
+        for (ColumnInfoTriple info : InstructorEventsView.getColumnInfo()) {
+            TableColumn<InstructorEventsView, String> col = new TableColumn<>(info.displayName);
             col.setCellValueFactory(new PropertyValueFactory<>(info.varName));
             table.getColumns().add(col);
         }
-        InstructorClassesView.fillList(list, id);
+        InstructorEventsView.fillList(list, id);
 
         // Handle clicks
         table.setOnMouseClicked(e -> {
             if (e.getClickCount() == 2) {
-                InstructorClassesView signup = table.getSelectionModel().getSelectedItem();
+                InstructorEventsView signup = table.getSelectionModel().getSelectedItem();
                 System.out.println("Clicked on " + signup.getEventId() + " " + signup.getClassName());
-                InstructorClassesView.removeClass(Integer.parseInt(signup.getEventId()));
+                InstructorEventsView.removeClass(Integer.parseInt(signup.getEventId()));
                 primaryStage.setScene(new InstructorHomePage(primaryStage, id));
             }
         });

@@ -46,3 +46,20 @@ JOIN Classes AS C
 JOIN Instructors AS I
     ON C.instructor_id = I.id
 ;
+
+CREATE OR REPLACE VIEW InstructorEventsView AS
+SELECT C.instructor_id as instructor_id
+    , E.id as event_id
+    , C.name as class_name
+    , E.room as room
+    , E.start_time as start_time
+    , E.end_time as end_time
+    , COUNT(S.id) as signups
+    , E.seats as seats
+FROM Events AS E
+JOIN Classes AS C
+    ON E.class_id = C.id
+LEFT JOIN Signups AS S
+    ON E.id = S.event_id
+GROUP BY C.instructor_id, E.id, C.name, E.room, E.start_time, E.end_time, E.seats
+;
