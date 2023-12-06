@@ -63,3 +63,16 @@ LEFT JOIN Signups AS S
     ON E.id = S.event_id
 GROUP BY C.instructor_id, E.id, C.name, E.room, E.start_time, E.end_time, E.seats
 ;
+
+CREATE OR REPLACE VIEW EventSignupsView AS
+SELECT SU.id AS signup_id
+    , E.id AS event_id
+    , S.id AS student_id
+    , S.full_name AS student_name
+    , S.username AS student_username
+FROM Signups AS SU
+JOIN Events AS E
+    ON SU.event_id = E.id
+JOIN Students AS S
+    ON SU.student_id = S.id
+;

@@ -9,9 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class InstructorEventsView {
-    public static final String SQL = "SELECT * FROM InstructorEventsView WHERE instructor_id = ";
-
-
+    private static final String SQL = "SELECT * FROM InstructorEventsView WHERE instructor_id = ";
 
     private String instructorId;
     private String eventId;
@@ -39,8 +37,8 @@ public class InstructorEventsView {
      */
     public static List<ColumnInfoTriple> getColumnInfo() {
         ArrayList<ColumnInfoTriple> info = new ArrayList<>();
-        info.add(new ColumnInfoTriple("instructor_id", "instructorId", "Instructor ID"));
-        info.add(new ColumnInfoTriple("event_id", "eventId", "Event ID"));
+//        info.add(new ColumnInfoTriple("instructor_id", "instructorId", "Instructor ID"));
+//        info.add(new ColumnInfoTriple("event_id", "eventId", "Event ID"));
         info.add(new ColumnInfoTriple("class_name", "className", "Class Name"));
         info.add(new ColumnInfoTriple("room", "room", "Room"));
         info.add(new ColumnInfoTriple("start_time", "startTime", "Start Time"));
