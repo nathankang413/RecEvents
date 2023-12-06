@@ -1,7 +1,7 @@
 package controllers.instructor;
 
 import app.ScreenController;
-import backend.queries.ColumnInfoTriple;
+import database.ColumnInfoTriple;
 import database.EventSignupsView;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;

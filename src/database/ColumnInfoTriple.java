@@ -1,4 +1,4 @@
-package backend.queries;
+package database;
 
 public class ColumnInfoTriple {
     public String dbName;

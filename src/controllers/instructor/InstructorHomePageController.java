@@ -1,6 +1,6 @@
 package controllers.instructor;
 import app.ScreenController;
-import backend.queries.ColumnInfoTriple;
+import database.ColumnInfoTriple;
 import database.InstructorEventsView;
 import controllers.UserPageController;
 import javafx.collections.ObservableList;

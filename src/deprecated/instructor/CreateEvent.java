@@ -2,7 +2,7 @@ package deprecated.instructor;
 
 import deprecated.components.TitledPage;
 import backend.queries.AddEvent;
-import backend.queries.ClassInformation;
+import database.ClassView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.*;
@@ -30,9 +30,9 @@ public class CreateEvent extends TitledPage {
         grid.add(nameLabel, 0, 2);
 
         // class dropdown
-        ObservableList<ClassInformation> options =
+        ObservableList<ClassView> options =
                 FXCollections.observableArrayList();
-        ClassInformation.fillList(options, instructorid);
+        ClassView.fillList(options, instructorid);
         System.out.println(options);
         ComboBox classes = new ComboBox(options);
         grid.add(classes, 1, 2);
@@ -76,7 +76,7 @@ public class CreateEvent extends TitledPage {
         grid.add(AddEventButton, 0, 7);
         AddEventButton.setOnAction(e -> {
             AddEvent.addEvent(
-                    options.get(options.indexOf(classes.getValue())).get_id(),
+                    options.get(options.indexOf(classes.getValue())).getClassId(),
                     roomField.getText(),
                     LocalDateTime.parse(startDate.getValue().toString()+"T"+startTime.getText()).toString(),
                     LocalDateTime.parse(endDate.getValue().toString()+"T"+endTime.getText()).toString(),

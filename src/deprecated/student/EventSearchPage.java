@@ -1,7 +1,7 @@
 package deprecated.student;
 
 import deprecated.components.TitledPage;
-import backend.queries.ColumnInfoTriple;
+import database.ColumnInfoTriple;
 import backend.queries.AvailableEventView;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Button;

@@ -1,5 +1,6 @@
 package deprecated.instructor;
 
+import database.ColumnInfoTriple;
 import deprecated.components.TitledPage;
 import deprecated.student.StudentHomePage;
 import backend.queries.*;

@@ -2,7 +2,7 @@ package deprecated.instructor;
 
 import deprecated.components.TitledPage;
 import deprecated.WelcomePage;
-import backend.queries.ColumnInfoTriple;
+import database.ColumnInfoTriple;
 import database.InstructorEventsView;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Button;

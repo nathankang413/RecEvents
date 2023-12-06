@@ -1,6 +1,6 @@
 package controllers.student;
 import app.ScreenController;
-import backend.queries.ColumnInfoTriple;
+import database.ColumnInfoTriple;
 import database.StudentSignupsView;
 import controllers.UserPageController;
 import javafx.collections.ObservableList;
