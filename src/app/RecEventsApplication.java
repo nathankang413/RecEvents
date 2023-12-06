@@ -25,6 +25,7 @@ public class RecEventsApplication extends Application {
 
             Scene scene = new Scene(root);
             primaryStage.setScene(scene);
+            primaryStage.setResizable(false);
             primaryStage.show();
             ScreenController.mainStage = primaryStage;
             ScreenController.addScreen("Welcome Page", scene);
