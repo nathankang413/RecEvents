@@ -1,38 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="RecEvents:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27f799d2-1e86-4931-86db-c3c496e19e9d" name="Changes" comment="Implemented new class functionality">
+    <list default="true" id="27f799d2-1e86-4931-86db-c3c496e19e9d" name="Changes" comment="Sample students">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/queries/AddClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/queries/AddEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/queries/AvailableEventView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/AvailableEventView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/queries/InstructorClasses.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/queries/InstructorProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/InstructorProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/queries/InstructorValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/InstructorValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/queries/StudentProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/StudentProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/WelcomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/WelcomePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/instructor/InstructorLoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/instructor/InstructorLoginPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/instructor/InstructorProfilePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/instructor/InstructorProfilePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/instructor/NewInstructorPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/instructor/NewInstructorPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/student/EventSearchPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/student/EventSearchPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/student/StudentProfilePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/student/StudentProfilePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deprecated/Constants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deprecated/WelcomePage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deprecated/components/TitledPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deprecated/instructor/CreateClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deprecated/instructor/CreateEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deprecated/instructor/InstructorHomePage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deprecated/instructor/InstructorLoginPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deprecated/instructor/InstructorProfilePage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deprecated/instructor/NewInstructorPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deprecated/student/EventSearchPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deprecated/student/NewStudentPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deprecated/student/StudentHomePage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deprecated/student/StudentLoginPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deprecated/student/StudentProfilePage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecEvents.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RecEvents.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/TestPageApplication.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,22 +48,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/loganbarker/Desktop/CS/365/DBProject/RecEvents&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "true",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "/Users/loganbarker/Desktop/CS/365/DBProject/RecEvents",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/fxml" />
@@ -95,7 +75,7 @@
       <recent name="app.pages.controllers" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RecEvents">
+  <component name="RunManager">
     <configuration name="RecEvents" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="17 (2)" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -106,18 +86,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestOnePage" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="TestPageApplication" />
-      <module name="RecEvents" />
-      <option name="VM_PARAMETERS" value="--module-path ../javafx-sdk-21.0.1/lib --add-modules javafx.controls,javafx.fxml " />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.RecEvents" />
-      <item itemvalue="Application.TestOnePage" />
-    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -366,7 +334,21 @@
       <option name="project" value="LOCAL" />
       <updated>1701848202619</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Removed deprecated code">
+      <created>1701848410860</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1701848410860</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Sample students">
+      <created>1701848623793</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1701848623793</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,8 +366,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Infrastructure" />
-    <MESSAGE value="DB interaction" />
     <MESSAGE value="Formatting" />
     <MESSAGE value="Linking pages together" />
     <MESSAGE value="DB connection" />
@@ -409,7 +389,9 @@
     <MESSAGE value="Fixed student profile graphics" />
     <MESSAGE value="Implemented new event functionality" />
     <MESSAGE value="Implemented new class functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented new class functionality" />
+    <MESSAGE value="Removed deprecated code" />
+    <MESSAGE value="Sample students" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sample students" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
