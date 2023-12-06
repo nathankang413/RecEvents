@@ -1,7 +1,5 @@
-package backend.queries;
+package database;
 
-import database.ColumnInfoTriple;
-import database.SqlConnector;
 import javafx.collections.ObservableList;
 
 import java.sql.ResultSet;

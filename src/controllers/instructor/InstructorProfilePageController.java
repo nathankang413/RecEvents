@@ -1,6 +1,6 @@
 package controllers.instructor;
 import app.ScreenController;
-import backend.queries.InstructorProfile;
+import database.InstructorProfile;
 import controllers.UserPageController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

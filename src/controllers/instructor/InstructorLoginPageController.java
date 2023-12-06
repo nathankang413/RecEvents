@@ -1,6 +1,6 @@
 package controllers.instructor;
 import app.ScreenController;
-import backend.queries.InstructorValidation;
+import database.InstructorValidation;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

@@ -4,15 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27f799d2-1e86-4931-86db-c3c496e19e9d" name="Changes" comment="gitignore">
+    <list default="true" id="27f799d2-1e86-4931-86db-c3c496e19e9d" name="Changes" comment="Implemented new class functionality">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/fxml/instructor/InstructorHomePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fxml/instructor/InstructorHomePage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/fxml/instructor/InstructorLoginPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fxml/instructor/InstructorLoginPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/fxml/instructor/NewInstructorPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fxml/instructor/NewInstructorPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/queries/AddClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/queries/AddEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/queries/AvailableEventView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/AvailableEventView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/queries/InstructorClasses.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/queries/InstructorProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/InstructorProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/queries/InstructorValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/InstructorValidation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/queries/StudentProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/StudentProfile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/WelcomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/WelcomePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/instructor/InstructorHomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/instructor/InstructorHomePageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/instructor/InstructorLoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/instructor/InstructorLoginPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/instructor/InstructorProfilePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/instructor/InstructorProfilePageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/instructor/NewInstructorPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/instructor/NewInstructorPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/student/EventSearchPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/student/EventSearchPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/student/StudentProfilePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/student/StudentProfilePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/deprecated/Constants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/deprecated/WelcomePage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/deprecated/components/TitledPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/deprecated/instructor/CreateClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/deprecated/instructor/CreateEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/deprecated/instructor/InstructorHomePage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/deprecated/instructor/InstructorLoginPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/deprecated/instructor/InstructorProfilePage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/deprecated/instructor/NewInstructorPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/deprecated/student/EventSearchPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/deprecated/student/NewStudentPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/deprecated/student/StudentHomePage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/deprecated/student/StudentLoginPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/deprecated/student/StudentProfilePage.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +51,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -59,7 +80,8 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -260,7 +282,91 @@
       <option name="project" value="LOCAL" />
       <updated>1699898211997</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Refactoring and prep for creating instructor front ends">
+      <created>1701814078456</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1701814078456</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Link InstructorProfilePage">
+      <created>1701814370450</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1701814370450</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Linked new event page">
+      <created>1701816179704</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1701816179704</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Linked new class">
+      <created>1701816575094</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1701816575094</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Linked Event View Page">
+      <created>1701827192321</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1701827192321</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Finished functionality for Event View Page">
+      <created>1701831193257</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1701831193257</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Login alerts">
+      <created>1701843952808</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1701843952808</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Fixed instructor profile graphics">
+      <created>1701844157438</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1701844157439</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Implemented student delete signups functionality">
+      <created>1701844691731</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1701844691731</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Fixed student profile graphics">
+      <created>1701844807749</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1701844807749</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Implemented new event functionality">
+      <created>1701847667846</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1701847667846</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Implemented new class functionality">
+      <created>1701848202619</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1701848202619</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,11 +384,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Init" />
-    <MESSAGE value="mySQL driver" />
-    <MESSAGE value="DB table setup" />
-    <MESSAGE value="Random Stuff" />
-    <MESSAGE value="Pages" />
     <MESSAGE value="Infrastructure" />
     <MESSAGE value="DB interaction" />
     <MESSAGE value="Formatting" />
@@ -296,7 +397,19 @@
     <MESSAGE value="formatting" />
     <MESSAGE value="Finish Student Home page functionality" />
     <MESSAGE value="gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
+    <MESSAGE value="Refactoring and prep for creating instructor front ends" />
+    <MESSAGE value="Link InstructorProfilePage" />
+    <MESSAGE value="Linked new event page" />
+    <MESSAGE value="Linked new class" />
+    <MESSAGE value="Linked Event View Page" />
+    <MESSAGE value="Finished functionality for Event View Page" />
+    <MESSAGE value="Login alerts" />
+    <MESSAGE value="Fixed instructor profile graphics" />
+    <MESSAGE value="Implemented student delete signups functionality" />
+    <MESSAGE value="Fixed student profile graphics" />
+    <MESSAGE value="Implemented new event functionality" />
+    <MESSAGE value="Implemented new class functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented new class functionality" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -308,5 +421,9 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

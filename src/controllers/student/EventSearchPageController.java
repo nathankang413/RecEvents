@@ -1,6 +1,6 @@
 package controllers.student;
 import app.ScreenController;
-import backend.queries.AvailableEventView;
+import database.AvailableEventView;
 import database.ColumnInfoTriple;
 import controllers.UserPageController;
 import javafx.collections.ObservableList;
