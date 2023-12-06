@@ -1,6 +1,6 @@
-package backend.queries;
+package database;
 
-import database.SqlConnector;
+import backend.queries.ColumnInfoTriple;
 import javafx.collections.ObservableList;
 
 import java.sql.ResultSet;
@@ -11,6 +11,7 @@ import java.util.List;
 public class StudentSignupsView {
     public static final String SQL = "SELECT * FROM StudentSignups WHERE student_id = ";
 
+    private String signupId;
     private String studentId;
     private String eventId;
     private String className;
@@ -19,7 +20,8 @@ public class StudentSignupsView {
     private String endTime;
     private String instructorName;
 
-    public StudentSignupsView(String studentId, String eventId, String className, String room, String startTime, String endTime, String instructorName) {
+    public StudentSignupsView(String signupId, String studentId, String eventId, String className, String room, String startTime, String endTime, String instructorName) {
+        this.signupId = signupId;
         this.studentId = studentId;
         this.eventId = eventId;
         this.className = className;
@@ -35,6 +37,7 @@ public class StudentSignupsView {
      */
     public static List<ColumnInfoTriple> getColumnInfo() {
         ArrayList<ColumnInfoTriple> info = new ArrayList<>();
+//        info.add(new ColumnInfoTriple("signup_id", "signupId", "Signup ID"));
 //        info.add(new ColumnInfoTriple("student_id", "studentId", "Student ID"));
 //        info.add(new ColumnInfoTriple("event_id", "eventId", "Event ID"));
         info.add(new ColumnInfoTriple("class_name", "className", "Class Name"));
@@ -50,6 +53,7 @@ public class StudentSignupsView {
         try {
             while (rs.next()) {
                 list.add(new StudentSignupsView(
+                        rs.getString("signup_id"),
                         rs.getString("student_id"),
                         rs.getString("event_id"),
                         rs.getString("class_name"),
@@ -64,8 +68,12 @@ public class StudentSignupsView {
         }
     }
 
-    public static void removeSignup(int student_id, int event_id) {
-        SqlConnector.runUpdate("DELETE FROM Signups WHERE student_id = " + student_id + " AND event_id = " + event_id);
+    public static void removeSignup(int signup_id) {
+        SqlConnector.runUpdate("DELETE FROM Signups WHERE id = " + signup_id);
+    }
+
+    public String getSignupId() {
+        return signupId;
     }
 
     public String getStudentId() {

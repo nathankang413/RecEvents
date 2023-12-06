@@ -3,7 +3,7 @@ package deprecated.student;
 import deprecated.components.TitledPage;
 import deprecated.WelcomePage;
 import backend.queries.ColumnInfoTriple;
-import backend.queries.StudentSignupsView;
+import database.StudentSignupsView;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
@@ -61,7 +61,7 @@ public class StudentHomePage extends TitledPage {
             if (e.getClickCount() == 2) {
                 StudentSignupsView signup = table.getSelectionModel().getSelectedItem();
                 System.out.println("Clicked on " + signup.getEventId() + " " + signup.getClassName());
-                StudentSignupsView.removeSignup(student_id, Integer.parseInt(signup.getEventId()));
+//                StudentSignupsView.removeSignup(student_id, Integer.parseInt(signup.getEventId()));
                 primaryStage.setScene(new StudentHomePage(primaryStage, student_id));
             }
         });

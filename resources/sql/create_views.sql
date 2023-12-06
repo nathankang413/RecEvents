@@ -31,7 +31,8 @@ GROUP BY E.id, E.seats
 ;
 
 CREATE OR REPLACE VIEW StudentSignups AS
-SELECT S.student_id AS student_id
+SELECT S.id AS signup_id
+    , S.student_id AS student_id
     , E.id AS event_id
     , C.name AS class_name
     , E.room AS room

@@ -1,7 +1,7 @@
 package controllers.student;
 import app.ScreenController;
 import backend.queries.ColumnInfoTriple;
-import backend.queries.StudentSignupsView;
+import database.StudentSignupsView;
 import controllers.UserPageController;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import static javafx.collections.FXCollections.observableArrayList;
@@ -40,6 +41,16 @@ public class StudentHomePageController implements UserPageController {
         Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         ScreenController.changeUserPage("Event Search Page", "/fxml/student/EventSearchPage.fxml", student_id);
     }
+
+    @FXML
+    protected void deleteSignup(MouseEvent e) {
+        if (e.getClickCount() == 2) {
+            StudentSignupsView signup = table.getSelectionModel().getSelectedItem();
+            StudentSignupsView.removeSignup(Integer.parseInt(signup.getSignupId()));
+            list.remove(signup);
+        }
+    }
+
     @FXML
     public void initialize(){
         list = observableArrayList();
